@@ -35,6 +35,8 @@
       padding: 0 0.25rem;
       border-radius: 3px;
     }
+    
+    /* Dark mode styles */
     body.bg-dark {
       color: #f0f0f0;
     }
@@ -51,21 +53,37 @@
     body.bg-dark .btn-outline-primary {
       color: #66d9ef;
     }
-    /* Make the theme toggle button fit in the navbar */
-    .theme-toggle-navbar {
-      margin-left: 1rem;
+    
+    /* Minimal theme toggle */
+    .theme-toggle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid #dee2e6;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      transition: all 0.2s ease;
     }
-    @media (max-width: 991.98px) {
-      .theme-toggle-navbar {
-        margin-left: 0;
-        margin-top: 0.5rem;
-        width: 100%;
-      }
+    .theme-toggle:hover {
+      background-color: #f8f9fa;
+      border-color: #adb5bd;
+    }
+    body.bg-dark .theme-toggle {
+      border-color: #495057;
+      color: #f0f0f0;
+    }
+    body.bg-dark .theme-toggle:hover {
+      background-color: #495057;
+    }
+    .theme-toggle i {
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <!-- Theme toggle button is now inside the navbar, not fixed -->
   <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white navbar-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#"><i class="bi bi-diagram-3"></i> Shreyansh Ajmera</a>
@@ -79,8 +97,8 @@
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
         <a target='_blank' href='https://www.linkedin.com/in/shreyanshajmera' class='btn btn-outline-primary me-2 mb-2 mb-lg-0'>LinkedIn</a>
-        <button class="btn btn-outline-secondary theme-toggle-navbar mb-2 mb-lg-0" onclick="toggleTheme()" aria-label="Toggle Theme">
-          <i class="bi bi-moon"></i> <span class="d-none d-lg-inline">Toggle Theme</span>
+        <button class="theme-toggle mb-2 mb-lg-0" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle dark mode">
+          <i class="bi bi-moon" id="themeIcon"></i>
         </button>
       </div>
     </div>
@@ -166,35 +184,40 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     function toggleTheme() {
-      document.body.classList.toggle('bg-dark');
-      document.body.classList.toggle('text-light');
+      const body = document.body;
+      const navbar = document.getElementById('mainNavbar');
+      const footer = document.getElementById('mainFooter');
+      const themeIcon = document.getElementById('themeIcon');
+      
+      body.classList.toggle('bg-dark');
+      body.classList.toggle('text-light');
 
-      // Navbar
-      var navbar = document.getElementById('mainNavbar');
-      if (document.body.classList.contains('bg-dark')) {
+      // Update navbar
+      if (body.classList.contains('bg-dark')) {
         navbar.classList.remove('bg-white', 'navbar-light');
         navbar.classList.add('bg-dark', 'navbar-dark');
+        themeIcon.classList.remove('bi-moon');
+        themeIcon.classList.add('bi-sun');
       } else {
         navbar.classList.remove('bg-dark', 'navbar-dark');
         navbar.classList.add('bg-white', 'navbar-light');
+        themeIcon.classList.remove('bi-sun');
+        themeIcon.classList.add('bi-moon');
       }
 
-      // Footer
-      var footer = document.getElementById('mainFooter');
-      if (footer) {
-        if (document.body.classList.contains('bg-dark')) {
-          footer.classList.remove('bg-light');
-          footer.classList.add('bg-dark', 'text-light');
-        } else {
-          footer.classList.remove('bg-dark', 'text-light');
-          footer.classList.add('bg-light');
-        }
+      // Update footer
+      if (body.classList.contains('bg-dark')) {
+        footer.classList.remove('bg-light');
+        footer.classList.add('bg-dark', 'text-light');
+      } else {
+        footer.classList.remove('bg-dark', 'text-light');
+        footer.classList.add('bg-light');
       }
 
-      // Optional: Toggle .bg-light sections to .bg-dark in dark mode
-      var lightSections = document.querySelectorAll('.bg-light');
-      lightSections.forEach(function(section) {
-        if (document.body.classList.contains('bg-dark')) {
+      // Update light sections
+      const lightSections = document.querySelectorAll('.bg-light');
+      lightSections.forEach(section => {
+        if (body.classList.contains('bg-dark')) {
           section.classList.add('bg-dark', 'text-light');
           section.classList.remove('bg-light');
         } else {
