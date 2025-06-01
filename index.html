@@ -60,8 +60,10 @@
   </style>
 </head>
 <body>
-  <button class="btn btn-outline-secondary theme-toggle" onclick="document.body.classList.toggle('bg-dark');document.body.classList.toggle('text-light');">Toggle Theme</button>
-  <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top">
+  <button class="btn btn-outline-secondary theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+  
+  <!-- Added id="mainNavbar" for theme toggling -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg bg-white navbar-light fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#"><i class="bi bi-diagram-3"></i> Shreyansh Ajmera</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
@@ -147,14 +149,54 @@
     <div class='container'>
       <h2 class='text-center mb-4'>Get in Touch</h2>
       <p class='text-center mb-2'>I'm open to collaborations, consulting roles, and exciting infrastructure projects around the world.</p>
-      <p class='text-center'>Email: <a href='mailto:enquiry@shreyanshajmera.com'>enquiry@shreyanshajmera.com</a></p>
+      <p class='text-center'>Email: <a href='mailto:ajmerasheyansh52@gmail.com'>ajmerasheyansh52@gmail.com</a></p>
     </div>
   </section>
 
-  <footer class="text-center py-4 bg-light">
+  <footer id="mainFooter" class="text-center py-4 bg-light">
     &copy; 2024 Shreyansh Ajmera. All rights reserved.
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('bg-dark');
+      document.body.classList.toggle('text-light');
+
+      // Navbar
+      var navbar = document.getElementById('mainNavbar');
+      if (document.body.classList.contains('bg-dark')) {
+        navbar.classList.remove('bg-white', 'navbar-light');
+        navbar.classList.add('bg-dark', 'navbar-dark');
+      } else {
+        navbar.classList.remove('bg-dark', 'navbar-dark');
+        navbar.classList.add('bg-white', 'navbar-light');
+      }
+
+      // Footer
+      var footer = document.getElementById('mainFooter');
+      if (footer) {
+        if (document.body.classList.contains('bg-dark')) {
+          footer.classList.remove('bg-light');
+          footer.classList.add('bg-dark', 'text-light');
+        } else {
+          footer.classList.remove('bg-dark', 'text-light');
+          footer.classList.add('bg-light');
+        }
+      }
+
+      // Optional: Toggle .bg-light sections to .bg-dark in dark mode
+      var lightSections = document.querySelectorAll('.bg-light');
+      lightSections.forEach(function(section) {
+        if (document.body.classList.contains('bg-dark')) {
+          section.classList.add('bg-dark', 'text-light');
+          section.classList.remove('bg-light');
+        } else {
+          section.classList.remove('bg-dark', 'text-light');
+          section.classList.add('bg-light');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
