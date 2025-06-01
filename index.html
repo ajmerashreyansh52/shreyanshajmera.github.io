@@ -3,111 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shreyansh Ajmera | Bridge Design Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Shreyansh Ajmera | Structural Engineer</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   <style>
+    :root {
+      --primary-color: #0070f3;
+      --background-light: #ffffff;
+      --text-dark: #222;
+      --text-muted: #666;
+      --border-light: #eee;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #0f0f0f;
-      color: #f5f5f5;
       margin: 0;
-      padding: 0;
-      line-height: 1.7;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
     }
     header {
-      padding: 3rem 2rem;
-      background-color: #121212;
+      background-color: #f8f8f8;
+      padding: 4rem 2rem;
       text-align: center;
     }
     header h1 {
-      font-size: 3rem;
-      margin: 0;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
     }
     header p {
-      color: #bbbbbb;
-      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
     }
-    nav {
-      text-align: center;
+    .button {
+      display: inline-block;
       margin-top: 1.5rem;
-    }
-    nav a {
-      color: #00bcd4;
+      padding: 0.8rem 1.4rem;
+      background-color: var(--primary-color);
+      color: #fff;
       text-decoration: none;
-      margin: 0 1rem;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .button:hover {
+      background-color: #005dc1;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
       font-weight: bold;
     }
-    .container {
-      max-width: 850px;
+    main {
+      max-width: 960px;
       margin: auto;
       padding: 2rem;
     }
-    h2 {
-      border-bottom: 1px solid #333;
-      padding-bottom: 0.4rem;
-      margin-top: 2.5rem;
-      font-size: 1.8rem;
+    section {
+      margin-top: 3rem;
     }
-    .download-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.7rem 1.4rem;
-      background-color: #00bcd4;
-      color: #000;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: bold;
+    h2 {
+      font-size: 1.75rem;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--border-light);
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+      margin: 0;
+    }
+    ul li {
+      margin-bottom: 0.7rem;
+    }
+    a {
+      color: var(--primary-color);
     }
     footer {
+      background: #f2f2f2;
       text-align: center;
-      color: #888;
       padding: 2rem;
+      color: #888;
       font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      main {
+        padding: 1.5rem;
+      }
+    }
+    body.dark-mode {
+      background-color: #111;
+      color: #eee;
+    }
+    body.dark-mode header {
+      background-color: #1e1e1e;
+    }
+    body.dark-mode h2 {
+      border-bottom: 2px solid #444;
+    }
+    body.dark-mode a {
+      color: #66d9ef;
+    }
+    body.dark-mode footer {
+      background-color: #1a1a1a;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" onclick="document.body.classList.toggle('dark-mode')">Toggle Theme</button>
   <header>
     <h1>Shreyansh Ajmera</h1>
-    <p>Bridge Design Engineer | Passionate about Sustainability, Computational Design & Safety</p>
-    <nav>
-      <a href="mailto:ajmerasheyansh52@gmail.com">Email</a>
-      <a href="https://linkedin.com/in/shreyanshajmera" target="_blank">LinkedIn</a>
-      <a href="Shreyansh%20Ajmera.pdf" download class="download-button">📄 Download Resume</a>
-    </nav>
+    <p>Bridge Design Engineer | Computational Design | Sustainability & Safety</p>
+    <a href="Shreyansh%20Ajmera.pdf" class="button" download>📄 Download Resume</a>
   </header>
 
-  <main class="container">
-    <h2>About</h2>
-    <p>
-      I am a civil engineer specialising in bridge design and computational workflows. My work combines structural understanding with automation and sustainability, helping deliver efficient, safe, and future-ready infrastructure. I bring over 6 years of experience across Norway, Iceland, India, and the UK, driving parametric solutions and cross-border collaboration.
-    </p>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I’m a structural engineer specialising in the design of bridges and infrastructure. My passion lies in combining civil engineering with computational methods to develop safe, elegant, and sustainable structures. I’ve contributed to projects in the UK, Norway, Iceland, and India — leading tasks ranging from parametric modelling to integral bridge design.
+      </p>
+    </section>
 
-    <h2>Skills & Tools</h2>
-    <p>
-      SOFiSTiK, Rhino-Grasshopper, Karamba 3D, LUSAS, AutoCAD, Mathcad, Python, IDEA StatiCa (Basic), Solibri, AdSec, MS Office
-    </p>
+    <section>
+      <h2>What I Do</h2>
+      <ul>
+        <li>Bridge design from concept to detail (post-tensioned, integral, voided slab)</li>
+        <li>Parametric modelling using Rhino–Grasshopper & Karamba</li>
+        <li>Design automation and optimisation using SOFiSTiK and Python</li>
+        <li>Detailed reinforcement planning, substructure & foundation design</li>
+      </ul>
+    </section>
 
-    <h2>Project Highlights</h2>
-    <ul>
-      <li><strong>K31 Vulu Bridge (Norway)</strong>: Integral post-tensioned deck with parametric PT optimisation using SOFiSTiK</li>
-      <li><strong>Ny Ölfusárbrú (Iceland)</strong>: Cable-stayed abutment modelling using Rhino–Grasshopper workflows</li>
-      <li><strong>Genova Breakwater (Italy)</strong>: Parametric caisson modelling under wave loading using SOFiSTiK</li>
-      <li><strong>E6 Overbridges (Norway)</strong>: Detailed shell + grillage design of voided slab bridges with substructure & foundations</li>
-    </ul>
+    <section>
+      <h2>Focus Areas</h2>
+      <ul>
+        <li><strong>Sustainability</strong>: Using voided slabs, reducing embodied carbon, lean detailing</li>
+        <li><strong>Computational Design</strong>: Driving efficiency and clarity in design through scripts and automation</li>
+        <li><strong>Health & Safety</strong>: Ensuring buildability, clarity in reinforcement and construction coordination</li>
+      </ul>
+    </section>
 
-    <h2>Professional Focus</h2>
-    <p>
-      My approach blends engineering principles with computational design and sustainability. I prioritise clarity in communication, integrated safety practices, and reducing carbon through smart detailing, voided slabs, and automation.
-    </p>
+    <section>
+      <h2>Selected Projects</h2>
+      <ul>
+        <li><strong>K31 Vulu Bridge (Norway)</strong>: Integral PT deck, grillage modelling, section optimisation</li>
+        <li><strong>Ny Ölfusárbrú (Iceland)</strong>: Cable-stayed abutment with parametric script workflows</li>
+        <li><strong>Genova Breakwater (Italy)</strong>: Caisson modelling under wave loads using SOFiSTiK</li>
+        <li><strong>E6 Overbridges (Norway)</strong>: Detailed design of voided slab decks with shell + grillage</li>
+      </ul>
+    </section>
 
-    <h2>Education & Memberships</h2>
-    <p>
-      M.Tech in Structural Dynamics – IIT Roorkee (2019)<br>
-      B.Tech in Civil Engineering – UKA Tarsadia University (2016)<br>
-      Graduate Member – ICE UK<br>
-      CSCS Card holder (valid till 2029)
-    </p>
+    <section>
+      <h2>Tools & Skills</h2>
+      <p>
+        SOFiSTiK, Rhino–Grasshopper, Karamba, LUSAS, AutoCAD, Python, Mathcad, AdSec, Solibri, IDEA StatiCa (basic), Microsoft Office Suite
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        📧 <a href="mailto:ajmerasheyansh52@gmail.com">ajmerasheyansh52@gmail.com</a><br>
+        🔗 <a href="https://linkedin.com/in/shreyanshajmera" target="_blank">LinkedIn Profile</a>
+      </p>
+    </section>
   </main>
 
   <footer>
