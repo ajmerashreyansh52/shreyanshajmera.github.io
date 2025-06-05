@@ -1,760 +1,456 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shreyansh Ajmera – Bridge Design & Computational Engineering Specialist</title>
-  <meta name="description" content="Computational bridge design specialist with 6 years international experience. Expert in SOFiSTiK, parametric modeling, and structural optimization.">
-  <meta property="og:title" content="Shreyansh Ajmera - Bridge Design Engineer">
-  <meta property="og:description" content="Designing resilient, efficient, and elegant bridges with computational tools and international expertise.">
-  <meta property="og:type" content="website">
-
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌉</text></svg>">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="styles.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEDFTYESZ2"></script>
-
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-LEDFTYESZ2');
   </script>
-
-  <style>
-    :root {
-      --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      --tech-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      --dark-bg: #0a0a0a;
-      --dark-card: #1a1a1a;
-      --dark-border: #2a2a2a;
-      --light-text: #f8f9fa;
-      --accent-blue: #66d9ef;
-      --accent-green: #a6e22e;
-      --accent-orange: #fd971f;
-    }
-
-    * {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      line-height: 1.7;
-      transition: all 0.3s ease;
-    }
-
-    /* Enhanced hero section */
-    .hero {
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
-      min-height: 70vh;
-      display: flex;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='rgba(102, 126, 234, 0.05)' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      animation: float 20s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(180deg); }
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 2rem;
-      line-height: 1.2;
-    }
-
-    .hero h1 .gradient-text {
-      background: var(--primary-gradient);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      animation: shimmer 3s ease-in-out infinite;
-    }
-
-    @keyframes shimmer {
-      0%, 100% { filter: hue-rotate(0deg); }
-      50% { filter: hue-rotate(45deg); }
-    }
-
-    .value-prop {
-      font-size: 1.3rem;
-      font-weight: 500;
-      margin-bottom: 2rem;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
-      border-radius: 15px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 2rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-
-    .stat-item {
-      text-align: center;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      min-width: 120px;
-    }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--accent-blue);
-      display: block;
-    }
-
-    .stat-label {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    /* Enhanced cards */
-    .project-card {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-border);
-      border-radius: 15px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-      position: relative;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
-      border-color: var(--accent-blue);
-    }
-
-    .project-image {
-      height: 250px;
-      background: var(--primary-gradient);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-image::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M10 10h80v5H10zm0 15h80v5H10zm0 15h80v5H10zm0 15h80v5H10zm0 15h80v5H10zm0 15h80v5H10z' fill='rgba(255,255,255,0.1)'/%3E%3C/svg%3E");
-      opacity: 0.3;
-    }
-
-    .project-icon {
-      font-size: 4rem;
-      color: white;
-      z-index: 2;
-      position: relative;
-    }
-
-    .project-metrics {
-      display: flex;
-      gap: 1rem;
-      margin: 1rem 0;
-      flex-wrap: wrap;
-    }
-
-    .metric-badge {
-      background: var(--tech-gradient);
-      color: white;
-      padding: 0.3rem 0.8rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
-
-    /* Timeline section */
-    .timeline {
-      position: relative;
-      padding: 2rem 0;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--primary-gradient);
-      transform: translateX(-50%);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin: 2rem 0;
-      width: 45%;
-    }
-
-    .timeline-item:nth-child(even) {
-      margin-left: auto;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: var(--accent-blue);
-      border: 3px solid var(--dark-bg);
-      border-radius: 50%;
-      top: 20px;
-    }
-
-    .timeline-item:nth-child(odd)::before {
-      right: -60px;
-    }
-
-    .timeline-item:nth-child(even)::before {
-      left: -60px;
-    }
-
-    .timeline-content {
-      background: var(--dark-card);
-      padding: 1.5rem;
-      border-radius: 10px;
-      border: 1px solid var(--dark-border);
-    }
-
-    /* Skills section */
-    .skill-category {
-      background: var(--dark-card);
-      border: 1px solid var(--dark-border);
-      border-radius: 15px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.3s ease;
-    }
-
-    .skill-category:hover {
-      transform: translateY(-5px);
-      border-color: var(--accent-blue);
-    }
-
-    .skill-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      background: var(--tech-gradient);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .skill-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .skill-list li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--dark-border);
-    }
-
-    .skill-list li:last-child {
-      border-bottom: none;
-    }
-
-    /* Testimonials */
-    .testimonial {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .testimonial::before {
-      content: '"';
-      font-size: 4rem;
-      color: var(--accent-blue);
-      position: absolute;
-      top: -10px;
-      left: 20px;
-    }
-
-    /* Enhanced buttons */
-    .btn-enhanced {
-      background: var(--primary-gradient);
-      border: none;
-      color: white;
-      padding: 0.8rem 2rem;
-      border-radius: 25px;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-enhanced::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s;
-    }
-
-    .btn-enhanced:hover::before {
-      left: 100%;
-    }
-
-    .btn-enhanced:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-      color: white;
-    }
-
-    /* Animations */
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.6s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* World map visualization */
-    .world-map {
-      background: var(--dark-card);
-      border-radius: 15px;
-      padding: 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .map-marker {
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      background: var(--accent-green);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(166, 226, 46, 0.7); }
-      70% { box-shadow: 0 0 0 10px rgba(166, 226, 46, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(166, 226, 46, 0); }
-    }
-
-    /* Theme toggle enhancements */
-    .theme-toggle {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: 2px solid var(--dark-border);
-      background: var(--dark-card);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .theme-toggle:hover {
-      border-color: var(--accent-blue);
-      transform: scale(1.1);
-    }
-
-    .theme-toggle i {
-      font-size: 16px;
-      color: var(--accent-blue);
-      transition: all 0.3s ease;
-    }
-
-    /* Light mode adjustments */
-    body:not(.bg-dark) {
-      --dark-bg: #ffffff;
-      --dark-card: #f8f9fa;
-      --dark-border: #e9ecef;
-      --light-text: #212529;
-    }
-
-    body:not(.bg-dark) .hero {
-      background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
-    }
-
-    /* Responsive design */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      
-      .hero-stats {
-        justify-content: center;
-      }
-      
-      .timeline::before {
-        left: 20px;
-      }
-      
-      .timeline-item {
-        width: calc(100% - 60px);
-        margin-left: 60px !important;
-      }
-      
-      .timeline-item::before {
-        left: -50px !important;
-      }
-    }
-
-    /* Loading animation */
-    .loading {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--dark-bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease;
-    }
-
-    .loading.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .spinner {
-      width: 50px;
-      height: 50px;
-      border: 3px solid var(--dark-border);
-      border-top: 3px solid var(--accent-blue);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-  </style>
-
 </head>
-
 <body class="bg-dark text-light">
-  <!-- Loading screen -->
-  <div class="loading" id="loading">
-    <div class="spinner"></div>
+  <!-- Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <p>Loading Portfolio...</p>
+    </div>
   </div>
 
   <nav id="mainNavbar" class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
-        <i class="bi bi-diagram-3 me-2"></i>
-        Shreyansh Ajmera
-      </a>
+      <a class="navbar-brand" href="#"><i class="bi bi-diagram-3"></i> Shreyansh Ajmera</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-3">
-          <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#portfolio">Projects</a></li>
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link smooth-scroll" href="#contact">Contact</a></li>
         </ul>
-        <a target='_blank' href='https://www.linkedin.com/in/shreyanshajmera' class='btn btn-outline-primary me-3 mb-2 mb-lg-0'>
-          <i class="bi bi-linkedin me-1"></i>LinkedIn
+        <a target='_blank' href='https://www.linkedin.com/in/shreyanshajmera' class='btn btn-outline-primary me-2 mb-2 mb-lg-0'>
+          <i class="bi bi-linkedin"></i> LinkedIn
         </a>
         <button class="theme-toggle mb-2 mb-lg-0" onclick="toggleTheme()" aria-label="Toggle Theme" title="Toggle light mode">
-          <i class="bi bi-moon" id="themeIcon"></i>
+          <i class="bi bi-sun" id="themeIcon"></i>
         </button>
       </div>
     </div>
   </nav>
 
-  <header class='hero text-center'>
+  <header class='hero text-center py-5 mt-5'>
     <div class='container'>
-      <div class="fade-in">
-        <h1 class="mb-4">
-          Designing <span class="gradient-text">resilient infrastructure</span> with computational precision
-        </h1>
-
-```
-    <div class="value-prop">
-      🌉 Transforming bridge engineering through parametric design and advanced FE modeling • 
-      6 years of international expertise across Europe and Asia • 
-      Specializing in post-tensioned and cable-stayed structures
-    </div>
-    
-    <div class="hero-stats justify-content-center">
-      <div class="stat-item">
-        <span class="stat-number">6</span>
-        <span class="stat-label">Years Experience</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">4</span>
-        <span class="stat-label">Countries</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">15+</span>
-        <span class="stat-label">Major Projects</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">€50M+</span>
-        <span class="stat-label">Project Value</span>
+      <div class="hero-content fade-in">
+        <h1>Designing resilient, efficient, and elegant bridges with <span class='gradient-text'>6 years of international experience</span> across Europe and Asia.</h1>
+        <p class='lead mb-4'>Design Engineer at Ramboll UK, specializing in computational bridge design and structural optimization using advanced FE tools and parametric modeling.</p>
+        <div class="hero-stats mb-4">
+          <div class="stat-item">
+            <strong>15+</strong>
+            <span>Major Projects</span>
+          </div>
+          <div class="stat-item">
+            <strong>4</strong>
+            <span>Countries</span>
+          </div>
+          <div class="stat-item">
+            <strong>€50M+</strong>
+            <span>Project Value</span>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <a href="Shreyansh%20Ajmera.pdf" class="btn btn-primary me-3">
+            <i class="bi bi-download"></i> Download Resume
+          </a>
+          <a href="#portfolio" class="btn btn-outline-light smooth-scroll">
+            <i class="bi bi-eye"></i> View Projects
+          </a>
+        </div>
       </div>
     </div>
-    
-    <div class="mt-4">
-      <a href="Shreyansh%20Ajmera.pdf" class="btn-enhanced me-3">
-        <i class="bi bi-download"></i>
-        Download Resume
-      </a>
-      <a href="#portfolio" class="btn-enhanced">
-        <i class="bi bi-arrow-down"></i>
-        View Projects
-      </a>
-    </div>
-  </div>
-</div>
-```
-
   </header>
+
+  <!-- Career Timeline -->
+  <section class="career-timeline py-5 bg-secondary">
+    <div class="container">
+      <h2 class="text-center mb-5">Career Journey</h2>
+      <div class="timeline">
+        <div class="timeline-item" data-year="2024">
+          <div class="timeline-content">
+            <h5>Design Engineer - Ramboll UK</h5>
+            <p>Leading computational bridge design projects across Europe</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-year="2022">
+          <div class="timeline-content">
+            <h5>Bridge Design Engineer - Ramboll Norway</h5>
+            <p>Specialized in cable-stayed and post-tensioned bridge design</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-year="2019">
+          <div class="timeline-content">
+            <h5>Structural Engineer - India</h5>
+            <p>Foundation work in structural analysis and design</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-year="2018">
+          <div class="timeline-content">
+            <h5>M.Tech - IIT Roorkee</h5>
+            <p>Specialized in Structural Engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id='portfolio' class='py-5'>
     <div class='container'>
-      <div class="text-center mb-5 fade-in">
-        <h2 class="display-5 fw-bold">Featured Projects</h2>
-        <p class="lead">Computational bridge design solutions across international markets</p>
-      </div>
-
-```
-  <div class='row g-4'>
-    <div class='col-lg-4 col-md-6 fade-in'>
-      <div class='project-card'>
-        <div class='project-image'>
-          <i class="bi bi-bezier project-icon"></i>
-        </div>
-        <div class='card-body p-4'>
-          <h5 class='card-title fw-bold'>E6 K31 Vulu Bridge, Norway</h5>
-          <div class="project-metrics">
-            <span class="metric-badge">33m Span</span>
-            <span class="metric-badge">€2.5M</span>
-            <span class="metric-badge">SOFiSTiK</span>
+      <h2 class='text-center mb-5'>Featured Projects</h2>
+      <div class='row g-4'>
+        <div class='col-md-4'>
+          <div class='card h-100 project-card' data-aos="fade-up">
+            <div class='project-image-container'>
+              <div class='background-image' style='background-image: url(img/portfolio-e6-k31.jpg)'>
+                <img src='img/spacer-portrait.png' alt="E6 K31 Bridge">
+              </div>
+              <div class="project-overlay">
+                <div class="project-stats">
+                  <span class="badge bg-primary">33m Span</span>
+                  <span class="badge bg-success">€2.5M</span>
+                </div>
+              </div>
+            </div>
+            <div class='card-body'>
+              <h5 class='card-title'>
+                <i class="bi bi-diagram-3 me-2"></i>E6 K31 Vulu Bridge
+              </h5>
+              <p class='card-text'>Concept design of a 33m span three-span integral post-tensioned bridge. Developed SOFiSTiK model and optimized PT profile for structural efficiency, coordinating with international teams across Europe.</p>
+              <div class="project-tags mb-3">
+                <span class="tag">SOFiSTiK</span>
+                <span class="tag">Post-Tensioned</span>
+                <span class="tag">Norway</span>
+              </div>
+              <div class="project-details">
+                <small class="text-muted">
+                  <i class="bi bi-calendar3"></i> 2023-2024 | 
+                  <i class="bi bi-geo-alt"></i> Lillehammer, Norway
+                </small>
+              </div>
+            </div>
           </div>
-          <p class='card-text'>Concept design of three-span integral post-tensioned bridge with optimized PT profile. Developed comprehensive SOFiSTiK model coordinating with international teams across Europe. Achieved 15% material savings through computational optimization.</p>
-          <div class="mt-3">
-            <strong>Key Achievement:</strong> Reduced construction time by 3 weeks through pre-optimized design
+        </div>
+        <div class='col-md-4'>
+          <div class='card h-100 project-card' data-aos="fade-up" data-aos-delay="100">
+            <div class='project-image-container'>
+              <div class='background-image' style='background-image: url(img/portfolio-olfusarbru.jpg)'>
+                <img src='img/spacer-portrait.png' alt="Ölfusárbrú Bridge">
+              </div>
+              <div class="project-overlay">
+                <div class="project-stats">
+                  <span class="badge bg-primary">Cable-Stayed</span>
+                  <span class="badge bg-success">€15M</span>
+                </div>
+              </div>
+            </div>
+            <div class='card-body'>
+              <h5 class='card-title'>
+                <i class="bi bi-bridge me-2"></i>Ny Ölfusárbrú (Iceland)
+              </h5>
+              <p class='card-text'>Parametric design of cable-stayed bridge abutments using Rhino–Grasshopper and SOFiSTiK. Using Single Point of Truth (SPoT) approach streamlining design iterations through computational workflows.</p>
+              <div class="project-tags mb-3">
+                <span class="tag">Grasshopper</span>
+                <span class="tag">Cable-Stayed</span>
+                <span class="tag">Parametric</span>
+              </div>
+              <div class="project-details">
+                <small class="text-muted">
+                  <i class="bi bi-calendar3"></i> 2022-2023 | 
+                  <i class="bi bi-geo-alt"></i> Selfoss, Iceland
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='col-md-4'>
+          <div class='card h-100 project-card' data-aos="fade-up" data-aos-delay="200">
+            <div class='project-image-container'>
+              <div class='background-image' style='background-image: url(img/portfolio-genova.jpg)'>
+                <img src='img/spacer-portrait.png' alt="Genova Breakwater">
+              </div>
+              <div class="project-overlay">
+                <div class="project-stats">
+                  <span class="badge bg-primary">Coastal</span>
+                  <span class="badge bg-success">€8M</span>
+                </div>
+              </div>
+            </div>
+            <div class='card-body'>
+              <h5 class='card-title'>
+                <i class="bi bi-water me-2"></i>Genova Breakwater
+              </h5>
+              <p class='card-text'>Parametric caisson modeling under extreme wave conditions for Italian coastal infrastructure. Developed multiple-geometry SOFiSTiK models with wave pressure calculations per Coastal Engineering Manual standards.</p>
+              <div class="project-tags mb-3">
+                <span class="tag">Coastal Engineering</span>
+                <span class="tag">Wave Analysis</span>
+                <span class="tag">Italy</span>
+              </div>
+              <div class="project-details">
+                <small class="text-muted">
+                  <i class="bi bi-calendar3"></i> 2023 | 
+                  <i class="bi bi-geo-alt"></i> Genova, Italy
+                </small>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
-    <div class='col-lg-4 col-md-6 fade-in'>
-      <div class='project-card'>
-        <div class='project-image'>
-          <i class="bi bi-geo-alt project-icon"></i>
-        </div>
-        <div class='card-body p-4'>
-          <h5 class='card-title fw-bold'>Ny Ölfusárbrú, Iceland</h5>
-          <div class="project-metrics">
-            <span class="metric-badge">Cable-stayed</span>
-            <span class="metric-badge">€8M</span>
-            <span class="metric-badge">Grasshopper</span>
-          </div>
-          <p class='card-text'>Parametric design of cable-stayed bridge abutments using Rhino-Grasshopper and SOFiSTiK integration. Implemented Single Point of Truth (SPoT) methodology streamlining design iterations by 60% through computational workflows.</p>
-          <div class="mt-3">
-            <strong>Innovation:</strong> First fully parametric abutment design in Iceland infrastructure
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class='col-lg-4 col-md-6 fade-in'>
-      <div class='project-card'>
-        <div class='project-image'>
-          <i class="bi bi-water project-icon"></i>
-        </div>
-        <div class='card-body p-4'>
-          <h5 class='card-title fw-bold'>Genova Breakwater, Italy</h5>
-          <div class="project-metrics">
-            <span class="metric-badge">Coastal</span>
-            <span class="metric-badge">€12M</span>
-            <span class="metric-badge">Wave Analysis</span>
-          </div>
-          <p class='card-text'>Parametric caisson modeling under extreme wave conditions for critical Italian coastal infrastructure. Developed multiple-geometry SOFiSTiK models with advanced wave pressure calculations per Coastal Engineering Manual standards.</p>
-          <div class="mt-3">
-            <strong>Challenge Solved:</strong> Optimized for 100-year storm conditions with 25% safety margin
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
   </section>
 
-  <section id='experience' class='py-5 bg-dark'>
-    <div class='container'>
-      <div class="text-center mb-5 fade-in">
-        <h2 class="display-5 fw-bold">Professional Journey</h2>
-        <p class="lead">6 years of international bridge engineering across 4 countries</p>
-      </div>
-
-```
-  <div class="timeline">
-    <div class="timeline-item fade-in">
-      <div class="timeline-content">
-        <h5 class="fw-bold text-primary">2023 - Present | Design Engineer</h5>
-        <h6 class="fw-bold">Ramboll UK • London, England</h6>
-        <p>Leading computational bridge design projects across Europe. Specializing in parametric modeling and FE analysis using SOFiSTiK and LUSAS. Managing multi-million pound infrastructure projects with international coordination.</p>
-        <div class="mt-2">
-          <span class="badge bg-primary me-2">ICE Graduate Member</span>
-          <span class="badge bg-success me-2">Chartered Engineer Track (2026)</span>
+  <!-- Case Study Section -->
+  <section class="case-study py-5 bg-secondary">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h3>Case Study: E6 K31 Bridge Optimization</h3>
+          <p class="lead">Reduced material costs by 15% through advanced PT optimization</p>
+          <div class="case-study-details">
+            <div class="detail-item">
+              <strong>Challenge:</strong> Design efficient post-tensioned bridge within tight budget constraints while meeting Norwegian design standards.
+            </div>
+            <div class="detail-item">
+              <strong>Solution:</strong> Developed parametric SOFiSTiK model with automated PT tendon optimization using Python scripting.
+            </div>
+            <div class="detail-item">
+              <strong>Outcome:</strong> Achieved 15% material savings (€375k) while improving structural performance and reducing construction time.
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="case-study-metrics">
+            <div class="metric">
+              <div class="metric-value">15%</div>
+              <div class="metric-label">Cost Reduction</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">€375k</div>
+              <div class="metric-label">Savings Achieved</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">30%</div>
+              <div class="metric-label">Time Saved</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    
-    <div class="timeline-item fade-in">
-      <div class="timeline-content">
-        <h5 class="fw-bold text-primary">2021 - 2023 | Senior Structural Engineer</h5>
-        <h6 class="fw-bold">Multiconsult • Oslo, Norway</h6>
-        <p>Developed expertise in Nordic bridge design standards and extreme weather considerations. Led parametric design implementation for major infrastructure projects including E6 corridor improvements.</p>
-        <div class="mt-2">
-          <span class="badge bg-primary me-2">Grasshopper Expertise</span>
-          <span class="badge bg-success me-2">Cold Climate Design</span>
-        </div>
-      </div>
-    </div>
-    
-    <div class="timeline-item fade-in">
-      <div class="timeline-content">
-        <h5 class="fw-bold text-primary">2019 - 2021 | Structural Engineer</h5>
-        <h6 class="fw-bold">Engineering Consultancy India • Mumbai, India</h6>
-        <p>Foundation years developing core structural analysis skills and project management capabilities. Worked on diverse infrastructure projects from concept through construction supervision.</p>
-        <div class="mt-2">
-          <span class="badge bg-primary me-2">M.Tech IIT Roorkee</span>
-          <span class="badge bg-success me-2">Project Management</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
   </section>
 
-  <section id='skills' class='py-5'>
+  <!-- Experience Section -->
+  <section id='experience' class='py-5'>
     <div class='container'>
-      <div class="text-center mb-5 fade-in">
-        <h2 class="display-5 fw-bold">Technical Expertise</h2>
-        <p class="lead">Cutting-edge tools and methodologies for modern bridge engineering</p>
-      </div>
-
-```
-  <div class='row g-4'>
-    <div class='col-lg-4 col-md-6 fade-in'>
-      <div class='skill-category'>
-        <div class='skill-icon'>
-          <i class="bi bi-cpu"></i>
+      <h2 class='text-center mb-5'>Professional Experience</h2>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="experience-card mb-4">
+            <div class="company-logo">
+              <i class="bi bi-building"></i>
+            </div>
+            <div class="experience-content">
+              <h4>Design Engineer - Ramboll UK</h4>
+              <p class="text-muted mb-2">2024 - Present | London, UK</p>
+              <ul>
+                <li>Leading computational bridge design projects with values exceeding €20M</li>
+                <li>Developing automated design workflows using Python and SOFiSTiK</li>
+                <li>Mentoring junior engineers in advanced FE analysis techniques</li>
+              </ul>
+              <div class="skills-used">
+                <span class="skill">SOFiSTiK</span>
+                <span class="skill">Python</span>
+                <span class="skill">Team Leadership</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="experience-card mb-4">
+            <div class="company-logo">
+              <i class="bi bi-diagram-3"></i>
+            </div>
+            <div class="experience-content">
+              <h4>Bridge Design Engineer - Ramboll Norway</h4>
+              <p class="text-muted mb-2">2022 - 2024 | Oslo, Norway</p>
+              <ul>
+                <li>Designed cable-stayed and post-tensioned bridges across Nordic region</li>
+                <li>Pioneered parametric design approach using Rhino-Grasshopper integration</li>
+                <li>Coordinated with multidisciplinary teams across 4 countries</li>
+              </ul>
+              <div class="skills-used">
+                <span class="skill">Grasshopper</span>
+                <span class="skill">Cable-Stayed Design</span>
+                <span class="skill">International Coordination</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <h5 class="fw-bold">Structural Analysis</h5>
-        <ul class="skill-list">
-          <li><strong>SOFiSTiK</strong> - Advanced bridge modeling</li>
-          <li><strong>LUSAS</strong> - Complex FE analysis</li>
-          <li><strong>IDEA StatiCa</strong> - Connection design</li>
-          <li><strong>ETABS/SAP2000</strong> - Building structures</li>
-        </ul>
       </div>
     </div>
-    
-    <div class='col-lg-4 col-md-6 fade-in'>
-      <div class='skill-category'>
-        <div class='skill-icon'>
-          <i class="bi bi-bezier2"></i>
-        </div>
-        <h5 class="fw-bold">Computational Design</h5>
-        <ul class="skill-list">
-          <li><strong>Rhino-Grasshopper</strong> - Parametric modeling</li>
-          <li><strong>Karamba3D</strong> - Structural optimization</li>
-          <li><strong>Python</strong> - Automation & analysis</li>
-          <li><strong>MATLAB</strong> - Algorithm development</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class='col-lg-4 col-md-6 fade-in'>
-      <div class='skill-category'>
-        <div class='skill-icon'>
-          <i class="bi bi-diagram-3"></i>
-        </div>
-        <h5 class="fw-bold">Bridge Specialization</h5>
-        <ul class="skill-list">
-          <li><strong>Post-tensioned</strong> - Concrete optimization</li>
-          <li><strong>Cable-stayed</strong> - Complex geometry</li>
-          <li><strong>Integral bridges</strong> - Seamless design</li>
-          <li><strong>Seismic design</strong> - Dynamic analysis</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
   </section>
 
-  <section class='py-5 bg-dark'>
+  <section id='about' class='bg-dark text-light py-5'>
     <div class='container'>
-      <div class="text-center mb-5 fade-in">
-        <h2 class="display-5 fw-bold">Global Project Footprint</h2>
-        <p class="lead">International experience across diverse markets and design standards</p>
+      <h2 class='text-center mb-5'>About Me</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <p class='lead'>
+            With an M.Tech from IIT Roorkee and 6 years of experience on projects across India, Norway, Iceland, and Italy, I specialize in computational bridge design and structural optimization. Currently a Design Engineer at Ramboll UK, progressing toward ICE Chartered Engineer status aiming to get chartered in 2026.
+          </p>
+          <blockquote class="testimonial">
+            <p>"Shreyansh's parametric approach to bridge design has revolutionized our project delivery times while maintaining the highest quality standards."</p>
+            <footer>- Senior Project Manager, Ramboll</footer>
+          </blockquote>
+        </div>
+        <div class="col-lg-6">
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h5><i class="bi bi-gear-fill me-2"></i>Technical Tools</h5>
+              <div class="skill-bar">
+                <div class="skill-name">SOFiSTiK</div>
+                <div class="skill-progress">
+                  <div class="skill-fill" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">Rhino-Grasshopper</div>
+                <div class="skill-progress">
+                  <div class="skill-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-name">LUSAS/IDEA StatiCa</div>
+                <div class="skill-progress">
+                  <div class="skill-fill" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-```
-  <div class="row">
-    <div class="col-lg-8 mx-auto">
-      <div class="world-map fade-in">
-        <div style="position: relative; width: 100%; height: 300px; background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDgwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0
-```
+      <div class='row mt-5'>
+        <div class='col-md-6'>
+          <h5><i class="bi bi-tools me-2"></i>Core Expertise</h5>
+          <ul class='expertise-list'>
+            <li><i class="bi bi-check2"></i>Structural Analysis: SOFiSTiK, LUSAS, IDEA StatiCa</li>
+            <li><i class="bi bi-check2"></i>Computational Design: Rhino-Grasshopper, Karamba3D, Python</li>
+            <li><i class="bi bi-check2"></i>Bridge Design: Post-tensioned, Cable-stayed, Integral structures</li>
+          </ul>
+        </div>
+        <div class='col-md-6'>
+          <h5><i class="bi bi-award me-2"></i>Professional Status</h5>
+          <ul class='expertise-list'>
+            <li><i class="bi bi-check2"></i>ICE Graduate Member (Chartered status by 2026)</li>
+            <li><i class="bi bi-check2"></i>CSCS Card - Managers & Professionals</li>
+            <li><i class="bi bi-check2"></i>Published researcher in bridge optimization</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Project Map -->
+  <section class="project-map py-5 bg-secondary">
+    <div class="container">
+      <h2 class="text-center mb-5">Global Project Locations</h2>
+      <div class="map-container">
+        <div class="map-point" data-country="Norway" style="top: 20%; left: 45%;">
+          <div class="map-marker"></div>
+          <div class="map-tooltip">
+            <strong>Norway</strong><br>
+            E6 K31 Bridge, Lillehammer
+          </div>
+        </div>
+        <div class="map-point" data-country="Iceland" style="top: 15%; left: 25%;">
+          <div class="map-marker"></div>
+          <div class="map-tooltip">
+            <strong>Iceland</strong><br>
+            Ny Ölfusárbrú, Selfoss
+          </div>
+        </div>
+        <div class="map-point" data-country="Italy" style="top: 55%; left: 50%;">
+          <div class="map-marker"></div>
+          <div class="map-tooltip">
+            <strong>Italy</strong><br>
+            Genova Breakwater
+          </div>
+        </div>
+        <div class="map-point" data-country="UK" style="top: 35%; left: 42%;">
+          <div class="map-marker active"></div>
+          <div class="map-tooltip">
+            <strong>UK</strong><br>
+            Current Location - Ramboll
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id='contact' class='py-5'>
+    <div class='container'>
+      <h2 class='text-center mb-4'>Get in Touch</h2>
+      <p class='text-center mb-4'>I'm open to collaborations, consulting roles, and exciting infrastructure projects around the world.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="contact-methods">
+            <div class="contact-item">
+              <i class="bi bi-envelope-fill"></i>
+              <div>
+                <strong>Email</strong>
+                <p><a href='mailto:enquiry@shreyanshajmera.com'>enquiry@shreyanshajmera.com</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-linkedin"></i>
+              <div>
+                <strong>LinkedIn</strong>
+                <p><a href='https://www.linkedin.com/in/shreyanshajmera' target='_blank'>Connect with me</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="bi bi-geo-alt-fill"></i>
+              <div>
+                <strong>Location</strong>
+                <p>London, United Kingdom</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="mainFooter" class="text-center py-4 bg-dark text-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-md-start">
+          &copy; 2024 Shreyansh Ajmera. All rights reserved.
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="text-light me-3"><i class="bi bi-arrow-up-circle"></i> Back to Top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
