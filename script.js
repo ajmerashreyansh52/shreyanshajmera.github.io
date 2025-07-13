@@ -1,42 +1,38 @@
-// Professional Website JavaScript - Enhanced with Analytics and Video Management
+// Professional Website JavaScript - Fixed Theme System
 document.addEventListener('DOMContentLoaded', function() {
-    // Theme toggle functionality with system preference detection
+    // Theme system with proper browser preference detection
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     const body = document.body;
     
-    // Check for saved theme preference or default to system preference
-    const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-    
-    body.setAttribute('data-theme', currentTheme);
-    updateThemeIcon(currentTheme);
-    
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {
-            const newTheme = e.matches ? 'dark' : 'light';
-            body.setAttribute('data-theme', newTheme);
-            updateThemeIcon(newTheme);
-        }
-    });
-    
-    themeToggle.addEventListener('click', function() {
-        const currentTheme = body.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    // Initialize theme system
+    function initializeTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         
-        body.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-        
-        // Google Analytics tracking for theme toggle
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'theme_toggle', {
-                'custom_map': {'theme': newTheme}
+        if (savedTheme) {
+            // User has manually set a preference
+            applyTheme(savedTheme);
+        } else {
+            // Use system preference
+            const systemTheme = systemPrefersDark ? 'dark' : 'light';
+            applyTheme(systemTheme);
+            
+            // Listen for system theme changes only when no manual preference is set
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {
+                    const newSystemTheme = e.matches ? 'dark' : 'light';
+                    applyTheme(newSystemTheme);
+                }
             });
         }
-    });
+    }
+    
+    function applyTheme(theme) {
+        body.setAttribute('data-theme', theme);
+        updateThemeIcon(theme);
+        console.log('Applied theme:', theme);
+    }
     
     function updateThemeIcon(theme) {
         if (theme === 'dark') {
@@ -45,6 +41,29 @@ document.addEventListener('DOMContentLoaded', function() {
             themeIcon.className = 'bi bi-sun-fill';
         }
     }
+    
+    // Theme toggle click handler
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Google Analytics tracking for theme toggle
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'theme_toggle', {
+                    'theme': newTheme
+                });
+            }
+            
+            console.log('Theme manually changed to:', newTheme);
+        });
+    }
+    
+    // Initialize the theme system
+    initializeTheme();
 
     // Video management system
     const videoConfig = {
