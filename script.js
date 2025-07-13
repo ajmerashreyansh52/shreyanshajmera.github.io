@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (ALWAYS_USE_SYSTEM_THEME) {
             // Hide theme toggle and always use system preference
             if (themeToggleContainer) {
-                themeToggleContainer.style.display = 'none';
+                themeToggleContainer.classList.add('system-theme-only');
             }
             
             const systemTheme = systemPrefersDark ? 'dark' : 'light';
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             // Show theme toggle and allow manual override
             if (themeToggleContainer) {
-                themeToggleContainer.style.display = 'block';
+                themeToggleContainer.classList.remove('system-theme-only');
             }
             
             if (savedTheme) {
