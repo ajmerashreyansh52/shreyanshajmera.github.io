@@ -5,4 +5,34 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://shreyanshajmera.com/#about</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shreyanshajmera.com/#experience</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shreyanshajmera.com/#projects</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://shreyanshajmera.com/#skills</loc>
+    <changefreq>quarterly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreyanshajmera.com/#videos</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shreyanshajmera.com/#contact</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
