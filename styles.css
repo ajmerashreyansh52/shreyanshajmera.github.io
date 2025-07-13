@@ -554,12 +554,13 @@ footer p {
     color: #fff !important;
 }
 
-/* YouTube video section */
+/* YouTube video section - Fixed alignment */
 .video-container {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 1rem;
 }
 
 .video-container iframe {
@@ -569,6 +570,50 @@ footer p {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    border: none;
+}
+
+/* Card improvements for video section */
+#videos .card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#videos .card-body {
+    padding: 1.25rem;
+}
+
+#videos .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+#videos .card-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Professional Development highlight box */
+.bg-primary.text-white.rounded {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+[data-theme="dark"] .bg-primary.text-white.rounded {
+    background: linear-gradient(135deg, var(--secondary-color), #1a1a1a) !important;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+}
+
+/* Theme toggle conditional visibility */
+#theme-toggle-container {
+    transition: opacity 0.3s ease;
+}
+
+#theme-toggle-container.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* Image styling */
