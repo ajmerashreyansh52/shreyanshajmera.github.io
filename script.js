@@ -1,5 +1,34 @@
 // Professional Website JavaScript
 document.addEventListener('DOMContentLoaded', function() {
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    body.setAttribute('data-theme', currentTheme);
+    
+    // Update icon based on current theme
+    updateThemeIcon(currentTheme);
+    
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = body.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        body.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+    
+    function updateThemeIcon(theme) {
+        if (theme === 'dark') {
+            themeIcon.className = 'bi bi-moon-fill';
+        } else {
+            themeIcon.className = 'bi bi-sun-fill';
+        }
+    }
+
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
@@ -225,6 +254,10 @@ style.textContent = `
         backdrop-filter: blur(10px);
     }
     
+    [data-theme="dark"] .navbar.scrolled {
+        background-color: rgba(15, 15, 15, 0.95) !important;
+    }
+    
     .animate-in {
         animation: fadeInUp 0.6s ease-out forwards;
     }
@@ -262,6 +295,31 @@ style.textContent = `
     .back-to-top:hover {
         background: var(--primary-color);
         transform: translateY(-2px);
+    }
+    
+    /* Dark mode image adjustments */
+    [data-theme="dark"] .card-img-top {
+        filter: brightness(0.8);
+    }
+    
+    /* Badge adjustments for dark mode */
+    [data-theme="dark"] .badge.bg-primary {
+        background-color: var(--primary-color) !important;
+    }
+    
+    [data-theme="dark"] .badge.bg-secondary {
+        background-color: var(--secondary-color) !important;
+    }
+    
+    /* Contact section dark mode */
+    [data-theme="dark"] #contact {
+        background-color: var(--dark-bg) !important;
+    }
+    
+    /* Footer dark mode */
+    [data-theme="dark"] footer {
+        background-color: var(--dark-bg) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 `;
 document.head.appendChild(style);
