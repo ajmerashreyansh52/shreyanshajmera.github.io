@@ -6,6 +6,19 @@
     --text-color: #333;
     --light-bg: #f8f9fa;
     --dark-bg: #2c3e50;
+    --card-bg: #ffffff;
+    --border-color: #dee2e6;
+}
+
+[data-theme="dark"] {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --text-color: #f8f9fa;
+    --light-bg: #1a1a1a;
+    --dark-bg: #0f0f0f;
+    --card-bg: #2d2d2d;
+    --border-color: #444;
 }
 
 * {
@@ -19,26 +32,58 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     overflow-x: hidden;
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navigation */
 .navbar {
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
+    background-color: var(--dark-bg) !important;
+}
+
+[data-theme="dark"] .navbar {
+    background-color: var(--dark-bg) !important;
 }
 
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
+    color: white !important;
+}
+
+.navbar-brand img {
+    filter: brightness(0) invert(1);
+}
+
+[data-theme="dark"] .navbar-brand img {
+    filter: brightness(1) invert(0);
 }
 
 .nav-link {
     font-weight: 500;
     transition: color 0.3s ease;
+    color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .nav-link:hover {
     color: var(--secondary-color) !important;
+}
+
+#theme-toggle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
 }
 
 /* Hero Section */
@@ -98,11 +143,22 @@ body {
     border: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .card {
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
 
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .card:hover {
+    box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
 }
 
 /* Experience Items */
@@ -215,6 +271,24 @@ section {
 
 /* Background Variations */
 .bg-light {
+    background-color: var(--light-bg) !important;
+}
+
+[data-theme="dark"] .bg-light {
+    background-color: var(--light-bg) !important;
+}
+
+/* Section spacing and theming */
+section {
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease;
+}
+
+section.bg-light {
+    background-color: var(--light-bg) !important;
+}
+
+[data-theme="dark"] section.bg-light {
     background-color: var(--light-bg) !important;
 }
 
