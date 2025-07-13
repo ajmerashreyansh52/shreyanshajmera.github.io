@@ -255,24 +255,28 @@ body {
     color: rgba(255, 255, 255, 0.9) !important; /* Make paragraphs white */
 }
 
-.contact-item i {
-    color: #3498db; /* Keep the blue color for icons */
-}
-
-.contact-item h6 {
-    color: #fff; /* Already white, keep it */
-}
-
-.contact-item p {
-    color: rgba(255, 255, 255, 0.9); /* Already white, keep it */
+.contact-item {
+    text-align: center;
+    padding: 2rem 1rem;
 }
 
 .contact-item a {
-    color: rgba(255, 255, 255, 0.9); /* Already white, keep it */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .contact-item a:hover {
-    color: #3498db !important; /* Blue on hover */
+    transform: translateY(-5px);
+}
+
+.contact-item i {
+    color: rgba(255, 255, 255, 0.8);
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover i {
+    color: var(--secondary-color) !important;
 }
 
 /* Buttons */
