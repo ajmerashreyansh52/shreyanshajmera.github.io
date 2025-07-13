@@ -3,34 +3,61 @@ document.addEventListener('DOMContentLoaded', function() {
     // Theme system with proper browser preference detection
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
+    const themeToggleContainer = document.getElementById('theme-toggle-container');
     const body = document.body;
+    
+    // Configuration: Set this to true to hide theme toggle and always use system preference
+    const ALWAYS_USE_SYSTEM_THEME = true; // Change to false to show theme toggle
     
     // Initialize theme system
     function initializeTheme() {
         const savedTheme = localStorage.getItem('theme');
         const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         
-        if (savedTheme) {
-            // User has manually set a preference
-            applyTheme(savedTheme);
-        } else {
-            // Use system preference
+        if (ALWAYS_USE_SYSTEM_THEME) {
+            // Hide theme toggle and always use system preference
+            if (themeToggleContainer) {
+                themeToggleContainer.style.display = 'none';
+            }
+            
             const systemTheme = systemPrefersDark ? 'dark' : 'light';
             applyTheme(systemTheme);
             
-            // Listen for system theme changes only when no manual preference is set
+            // Listen for system theme changes
             window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                if (!localStorage.getItem('theme')) {
-                    const newSystemTheme = e.matches ? 'dark' : 'light';
-                    applyTheme(newSystemTheme);
-                }
+                const newSystemTheme = e.matches ? 'dark' : 'light';
+                applyTheme(newSystemTheme);
             });
+        } else {
+            // Show theme toggle and allow manual override
+            if (themeToggleContainer) {
+                themeToggleContainer.style.display = 'block';
+            }
+            
+            if (savedTheme) {
+                // User has manually set a preference
+                applyTheme(savedTheme);
+            } else {
+                // Use system preference initially
+                const systemTheme = systemPrefersDark ? 'dark' : 'light';
+                applyTheme(systemTheme);
+                
+                // Listen for system theme changes only when no manual preference is set
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                    if (!localStorage.getItem('theme')) {
+                        const newSystemTheme = e.matches ? 'dark' : 'light';
+                        applyTheme(newSystemTheme);
+                    }
+                });
+            }
         }
     }
     
     function applyTheme(theme) {
         body.setAttribute('data-theme', theme);
-        updateThemeIcon(theme);
+        if (!ALWAYS_USE_SYSTEM_THEME) {
+            updateThemeIcon(theme);
+        }
         console.log('Applied theme:', theme);
     }
     
@@ -42,8 +69,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Theme toggle click handler
-    if (themeToggle) {
+    // Theme toggle click handler (only if toggle is visible)
+    if (themeToggle && !ALWAYS_USE_SYSTEM_THEME) {
         themeToggle.addEventListener('click', function() {
             const currentTheme = body.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
