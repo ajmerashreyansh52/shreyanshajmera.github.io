@@ -612,3 +612,42 @@ main {
         padding-bottom: 5rem !important;
     }
 }
+
+/* Profile Image */
+.profile-image-wrapper {
+    position: relative;
+    display: inline-block;
+    animation: fadeInUp 1s ease-out 0.8s both;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile responsiveness for profile image */
+@media (max-width: 992px) {
+    .profile-image-wrapper {
+        margin-top: 3rem;
+    }
+    
+    .profile-image {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        max-width: 250px;
+    }
+}
