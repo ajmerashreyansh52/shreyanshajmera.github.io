@@ -651,3 +651,88 @@ main {
         max-width: 250px;
     }
 }
+
+/* Hero Content Wrapper */
+.hero-content {
+    position: relative;
+}
+
+/* Profile Image - Aligned with text */
+.profile-image-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    animation: fadeInUp 1s ease-out 0.8s both;
+    margin-top: 0; /* Remove any default margins */
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    
+    /* Critical: Set exact height to match text content */
+    height: calc(100% - 2rem); /* Subtract to account for any spacing */
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Ensure the image container matches the text height */
+.hero-section .col-lg-5 {
+    height: 100%;
+}
+
+.hero-section .col-lg-5 .profile-image-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Calculate height based on text content */
+@media (min-width: 992px) {
+    .profile-image {
+        /* This will make the image exactly match the height from "Bridge Design Engineer" to "modeling." */
+        height: auto;
+        aspect-ratio: 3/4; /* Adjust this ratio based on your photo */
+        max-height: 450px; /* Set a reasonable max height */
+    }
+    
+    .hero-section .row {
+        align-items: flex-start !important;
+        padding-top: 2rem; /* Add some top padding to align properly */
+    }
+}
+
+.profile-image:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile responsiveness for profile image */
+@media (max-width: 992px) {
+    .hero-section .col-lg-5 {
+        margin-top: 3rem;
+    }
+    
+    .profile-image-wrapper {
+        text-align: center;
+        height: auto;
+    }
+    
+    .profile-image {
+        max-width: 300px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-image {
+        max-width: 250px;
+    }
+}
