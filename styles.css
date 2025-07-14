@@ -100,6 +100,8 @@ body {
     overflow: hidden;
     min-height: 100vh;
     padding-top: 80px;
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
 }
 
 .hero-section::before {
@@ -701,11 +703,33 @@ main {
         aspect-ratio: 3/4; /* Adjust this ratio based on your photo */
         max-height: 450px; /* Set a reasonable max height */
     }
-    
-    .hero-section .row {
-        align-items: flex-start !important;
-        padding-top: 2rem; /* Add some top padding to align properly */
+/* Center hero content vertically */
+.hero-section .row {
+    min-height: calc(100vh - 80px); /* Subtract navbar height */
+    display: flex;
+    align-items: center; /* This centers content vertically */
+}
+
+/* Ensure proper alignment of image with text */
+@media (min-width: 992px) {
+    .hero-section .col-lg-5 {
+        display: flex;
+        align-items: center; /* Center the image column */
     }
+    
+    .profile-image-wrapper {
+        width: 100%;
+    }
+    
+    .profile-image {
+        height: auto;
+        aspect-ratio: 3/4;
+        max-height: 500px; /* Slightly increased for better proportion */
+        width: 100%;
+        object-fit: cover;
+    }
+}
+    
 }
 
 .profile-image:hover {
