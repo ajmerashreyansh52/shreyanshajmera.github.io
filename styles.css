@@ -121,8 +121,8 @@ html {
 }
 
 .profile-image-wrapper {
-    width: 75%;
-    animation: fadeInUp 0s ease-out 0.0s both;
+    width: 50%;
+    animation: fadeInUp 0s ease-out 0.2s both;
 }
 
 .profile-image {
