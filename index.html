@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreyansh Ajmera - Computational Design Specialist</title>
-    
+    <title>Shreyansh Ajmera — Bridge Design Engineer</title>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LEDFTYESZ2"></script>
     <script>
@@ -13,139 +13,151 @@
         gtag('js', new Date());
         gtag('config', 'G-LEDFTYESZ2');
     </script>
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#home">
-                <img src="img/logo.png" alt="Logo" height="32" class="me-2">
-                Shreyansh Ajmera
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a class="nav-brand" href="#home">SA</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#videos">Videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
-                <div class="col-lg-7">
-                    <div class="hero-content">
-                        <h1 class="display-4 fw-bold mb-4">
-                            Bridge Design Engineer
-                        </h1>
-                        <h1>Designing resilient, efficient, and elegant bridges with <span class='marker-highlight'>6 years of international experience</span> across Europe and Asia.</h1>
-                        <p class='lead mb-4'>Design Engineer at Ramboll UK, specializing in computational bridge design and structural optimization using advanced FE tools and parametric modeling.</p>
-                        <div class="d-flex flex-column flex-md-row gap-3 mb-4">
-                            <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
-                            <a href="Shreyansh%20Ajmera.pdf" class="btn btn-outline-light btn-lg" download>
-                                <i class="bi bi-download me-2"></i>Download CV
-                            </a>
-                        </div>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/shreyanshajmera" target="_blank" class="btn btn-outline-light me-2">
-                                <i class="bi bi-linkedin"></i>
-                            </a>
-                            <a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" class="btn btn-outline-light me-2">
-                                <i class="bi bi-youtube"></i>
-                            </a>
-                            <a href="mailto:enquiry@shreyanshajmera.com" class="btn btn-outline-light">
-                                <i class="bi bi-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+            <div class="hero-blob blob-1"></div>
+            <div class="hero-blob blob-2"></div>
+        </div>
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hero-eyebrow reveal-up" style="--delay:0s">Bridge Design Engineer · Ramboll UK</p>
+                <h1 class="hero-title reveal-up" style="--delay:0.1s">
+                    Designing bridges<br>
+                    <em>that endure.</em>
+                </h1>
+                <p class="hero-sub reveal-up" style="--delay:0.2s">
+                    6 years of international experience across Europe and Asia, specialising in computational design, post-tensioned concrete, and structural optimisation.
+                </p>
+                <div class="hero-actions reveal-up" style="--delay:0.3s">
+                    <a href="#contact" class="btn-primary">Get in Touch</a>
+                    <a href="Shreyansh%20Ajmera.pdf" class="btn-ghost" download>
+                        <i class="bi bi-download"></i> Download CV
+                    </a>
                 </div>
-                <div class="col-lg-5 d-flex align-items-start">
-                    <div class="profile-image-wrapper">
-                        <img src="img/profile.jpg" alt="Shreyansh Ajmera" class="profile-image">
-                    </div>
+                <div class="hero-social reveal-up" style="--delay:0.4s">
+                    <a href="https://www.linkedin.com/in/shreyanshajmera" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="/cdn-cgi/l/email-protection#ee8b809f9b879c97ae9d869c8b978f809d868f84838b9c8fc08d8183" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-image reveal-right" style="--delay:0.2s">
+                <div class="hero-img-frame">
+                    <img src="img/profile.jpg" alt="Shreyansh Ajmera">
+                    <div class="hero-img-accent"></div>
+                </div>
+                <div class="hero-stat stat-1">
+                    <span class="stat-num">6</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="hero-stat stat-2">
+                    <span class="stat-num">3+</span>
+                    <span class="stat-label">Countries</span>
                 </div>
             </div>
         </div>
+        <a href="#about" class="hero-scroll" aria-label="Scroll down">
+            <span>Scroll</span>
+            <i class="bi bi-arrow-down"></i>
+        </a>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <section id="about" class="section section-about">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-4">About Me</h2>
-                    <p class="lead">
-                        Enthusiastic and results-driven bridge design engineer with 6 years of experience in the civil engineering industry, specializing in the design and analysis of complex bridge structures.
+            <div class="section-header">
+                <span class="section-tag">About</span>
+                <h2 class="section-title">Passion for <em>precision</em><br>and performance.</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal-up">
+                    <p class="about-lead">
+                        Enthusiastic and results-driven bridge design engineer with 6 years of experience, specialising in the design and analysis of complex bridge structures.
                     </p>
                     <p>
                         Passionate about structural engineering and skilled at solving both complex and repetitive challenges through innovative and efficient solutions. Proficient in Eurocodes, with working knowledge of AASHTO LRFD.
                     </p>
                     <p>
-                        Strong interest in FE modelling and computational design, with hands-on experience using tools such as SOFiSTiK, Grasshopper, Rhino, Karamba 3D, and LUSAS to enhance workflows, improve design accuracy, and optimize structures.
+                        Strong interest in FE modelling and computational design, with hands-on experience using SOFiSTiK, Grasshopper, Rhino, Karamba 3D, and LUSAS to enhance workflows, improve design accuracy, and optimise structures.
                     </p>
-                    <p class="mt-4">
-                        <strong>Professional Development:</strong> Currently progressing towards ICE chartership with target to appear for CPR next year.
+                    <p class="about-note">
+                        <i class="bi bi-award"></i>
+                        Currently progressing towards ICE chartership, targeting CPR next year.
                     </p>
+                </div>
+                <div class="about-highlights reveal-up" style="--delay:0.15s">
+                    <div class="highlight-card">
+                        <i class="bi bi-building"></i>
+                        <h4>Major Projects</h4>
+                        <p>Leading bridge design across Norway, Iceland, Italy and India at Ramboll UK.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="bi bi-cpu"></i>
+                        <h4>Computational Design</h4>
+                        <p>Leveraging parametric tools to optimise structures and automate workflows.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <i class="bi bi-play-circle"></i>
+                        <h4>SpanLab</h4>
+                        <p>Sharing structural engineering knowledge through educational YouTube content.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="py-5">
+    <section id="experience" class="section section-experience">
         <div class="container">
-            <h2 class="text-center mb-5">Professional Experience</h2>
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="experience-item mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Design Engineer – Major Projects</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Ramboll UK | June 2023 - Present</h6>
-                                <p class="card-text">
-                                    Leading major bridge design projects across Europe, specializing in computational design and structural optimization.
-                                </p>
-                            </div>
-                        </div>
+            <div class="section-header">
+                <span class="section-tag">Experience</span>
+                <h2 class="section-title">Where I've<br><em>worked.</em></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">June 2023 – Present</span>
+                        <h3>Design Engineer – Major Projects</h3>
+                        <h4>Ramboll UK, Southampton</h4>
+                        <p>Leading major bridge design projects across Europe, specialising in computational design and structural optimisation using SOFiSTiK, Rhino-Grasshopper, and parametric modelling workflows.</p>
                     </div>
-                    <div class="experience-item mb-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">Assistant Design Engineer</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Ramboll India Pvt Ltd | July 2019 - June 2023</h6>
-                                <p class="card-text">
-                                    Developed expertise in bridge design and analysis, working on various international projects with focus on structural optimization and computational methods.
-                                </p>
-                            </div>
-                        </div>
+                </div>
+                <div class="timeline-item reveal-up" style="--delay:0.1s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">July 2019 – June 2023</span>
+                        <h3>Assistant Design Engineer</h3>
+                        <h4>Ramboll India Pvt Ltd, Gurgaon</h4>
+                        <p>Developed expertise in bridge design and analysis, working on international projects with focus on structural optimisation, post-tensioned concrete, and computational methods.</p>
                     </div>
                 </div>
             </div>
@@ -153,56 +165,59 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-5 bg-light">
+    <section id="projects" class="section section-projects">
         <div class="container">
-            <h2 class="text-center mb-5">Key Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
-                        <img src="img/k31-vulu-bridge.jpg" class="card-img-top project-image" alt="K31 Vulu Bridge" style="height: 200px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">E6-Ranheim-Sveberg, Norway</h5>
-                            <p class="card-text">
-                                Concept design of the K31 Vulu Bridge, a three-span integral post-tensioned slab deck bridge with maximum span of 33m.
-                            </p>
-                            <div class="mb-2">
-                                <span class="badge bg-primary">SOFiSTiK</span>
-                                <span class="badge bg-secondary">Post-Tensioned</span>
-                            </div>
-                            <small class="text-muted">May 2025 - Present</small>
+            <div class="section-header">
+                <span class="section-tag">Projects</span>
+                <h2 class="section-title">Key <em>projects.</em></h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal-up">
+                    <div class="project-img">
+                        <img src="img/k31-vulu-bridge.jpg" alt="K31 Vulu Bridge">
+                        <div class="project-overlay">
+                            <span class="project-year">2025 – Present</span>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
-                        <img src="img/olfusarbrú-bridge.jpg" class="card-img-top project-image" alt="Ny Ölfusárbrú Cable-Stayed Bridge" style="height: 200px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Ny Ölfusárbrú, Iceland</h5>
-                            <p class="card-text">
-                                Detailed design of cable-stayed bridge abutments using advanced parametric modeling with SOFiSTiK and Rhino-Grasshopper.
-                            </p>
-                            <div class="mb-2">
-                                <span class="badge bg-primary">Cable-Stayed</span>
-                                <span class="badge bg-secondary">Grasshopper</span>
-                            </div>
-                            <small class="text-muted">Sept 2024 - April 2025</small>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>SOFiSTiK</span>
+                            <span>Post-Tensioned</span>
                         </div>
+                        <h3>E6-Ranheim-Sveberg, Norway</h3>
+                        <p>Concept design of the K31 Vulu Bridge — a three-span integral post-tensioned slab deck bridge with maximum span of 33m.</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card h-100">
-                        <img src="img/genova-breakwater.jpg" class="card-img-top project-image" alt="Genova Breakwater" style="height: 200px; object-fit: cover;">
-                        <div class="card-body">
-                            <h5 class="card-title">Genova Breakwater, Italy</h5>
-                            <p class="card-text">
-                                Detailed design of breakwater caissons under extreme wave conditions using parametric modeling for multiple geometries.
-                            </p>
-                            <div class="mb-2">
-                                <span class="badge bg-primary">Coastal</span>
-                                <span class="badge bg-secondary">Wave Analysis</span>
-                            </div>
-                            <small class="text-muted">Sept 2023 - Sept 2024</small>
+                <div class="project-card reveal-up" style="--delay:0.1s">
+                    <div class="project-img">
+                        <img src="img/olfusarbrú-bridge.jpg" alt="Ny Ölfusárbrú">
+                        <div class="project-overlay">
+                            <span class="project-year">Sept 2024 – April 2025</span>
                         </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>Cable-Stayed</span>
+                            <span>Grasshopper</span>
+                        </div>
+                        <h3>Ny Ölfusárbrú, Iceland</h3>
+                        <p>Detailed design of cable-stayed bridge abutments using advanced parametric modelling with SOFiSTiK and Rhino-Grasshopper.</p>
+                    </div>
+                </div>
+                <div class="project-card reveal-up" style="--delay:0.2s">
+                    <div class="project-img">
+                        <img src="img/genova-breakwater.jpg" alt="Genova Breakwater">
+                        <div class="project-overlay">
+                            <span class="project-year">Sept 2023 – Sept 2024</span>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span>Coastal</span>
+                            <span>Wave Analysis</span>
+                        </div>
+                        <h3>Genova Breakwater, Italy</h3>
+                        <p>Detailed design of breakwater caissons under extreme wave conditions using parametric modelling for multiple geometries.</p>
                     </div>
                 </div>
             </div>
@@ -210,209 +225,144 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-5">
+    <section id="skills" class="section section-skills">
         <div class="container">
-            <h2 class="text-center mb-5">Technical Skills</h2>
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <h5>Structural Analysis</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>SOFiSTiK</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>LUSAS</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>IDEA StatiCa</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Oasys AdSec</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h5>Computational Design</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Rhino-Grasshopper</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Karamba 3D</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Python</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Mathcad</li>
-                            </ul>
-                        </div>
+            <div class="section-header">
+                <span class="section-tag">Skills</span>
+                <h2 class="section-title">Technical <em>toolkit.</em></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-group reveal-up">
+                    <h4><i class="bi bi-diagram-3"></i> Structural Analysis</h4>
+                    <div class="skill-tags">
+                        <span>SOFiSTiK</span>
+                        <span>LUSAS</span>
+                        <span>IDEA StatiCa</span>
+                        <span>Oasys AdSec</span>
                     </div>
-                    <div class="row g-4 mt-2">
-                        <div class="col-md-6">
-                            <h5>BIM & Collaboration</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Solibri Office</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Trimble Connect</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>AutoCAD</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>3D Model Coordination</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <h5>Design Standards</h5>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Eurocodes</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>AASHTO LRFD</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Manual N400 (Norway)</li>
-                                <li><i class="bi bi-check2-circle text-success me-2"></i>Coastal Engineering Manual</li>
-                            </ul>
-                        </div>
+                </div>
+                <div class="skill-group reveal-up" style="--delay:0.1s">
+                    <h4><i class="bi bi-cpu"></i> Computational Design</h4>
+                    <div class="skill-tags">
+                        <span>Rhino-Grasshopper</span>
+                        <span>Karamba 3D</span>
+                        <span>Python</span>
+                        <span>Mathcad</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal-up" style="--delay:0.2s">
+                    <h4><i class="bi bi-layers"></i> BIM & Collaboration</h4>
+                    <div class="skill-tags">
+                        <span>Solibri Office</span>
+                        <span>Trimble Connect</span>
+                        <span>AutoCAD</span>
+                        <span>3D Coordination</span>
+                    </div>
+                </div>
+                <div class="skill-group reveal-up" style="--delay:0.3s">
+                    <h4><i class="bi bi-book"></i> Design Standards</h4>
+                    <div class="skill-tags">
+                        <span>Eurocodes</span>
+                        <span>AASHTO LRFD</span>
+                        <span>Manual N400</span>
+                        <span>Coastal Eng. Manual</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- YouTube Videos Section -->
-    <section id="videos" class="py-5 bg-light">
+    <!-- Videos Section -->
+    <section id="videos" class="section section-videos">
         <div class="container">
-            <h2 class="text-center mb-5">Educational Videos</h2>
-            <div class="row g-4">
-                <div class="col-lg-8 mx-auto text-center mb-4">
-                    <p class="lead">Sharing knowledge through educational content on structural engineering and computational design</p>
-                    <a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" class="btn btn-danger btn-lg">
-                        <i class="bi bi-youtube me-2"></i>Visit SpanLab Channel
-                    </a>
+            <div class="section-header">
+                <span class="section-tag">SpanLab</span>
+                <h2 class="section-title">Learning through <em>content.</em></h2>
+            </div>
+            <div class="videos-intro reveal-up">
+                <p>Sharing knowledge through educational content on structural engineering and computational design.</p>
+                <a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" class="btn-youtube">
+                    <i class="bi bi-youtube"></i> Visit SpanLab Channel
+                </a>
+            </div>
+            <div class="video-featured reveal-up" style="--delay:0.15s">
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/dXG51nwp46U?si=03ynGbp2rswt4ROu" title="SOFiSTiK Installation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                
-                <!-- Current Video -->
-                <div class="col-lg-8 mx-auto">
-                    <div class="card h-100">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/dXG51nwp46U?si=03ynGbp2rswt4ROu" title="SOFiSTiK Installation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body d-flex flex-column text-center">
-                            <h5 class="card-title">SOFiSTiK Installation</h5>
-                            <p class="card-text flex-grow-1">Step-by-step installation of SOFiSTiK FEA, SOFiPlus-X, and Rhinoceros interface using SAM.</p>
-                        </div>
-                    </div>
+                <div class="video-info">
+                    <span class="video-tag">Latest Video</span>
+                    <h3>SOFiSTiK Installation</h3>
+                    <p>Step-by-step installation of SOFiSTiK FEA, SOFiPlus-X, and Rhinoceros interface using SAM.</p>
                 </div>
-                
-                <!-- Future Videos - Hidden by default -->
-                <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="2">
-                    <div class="card">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" title="Video 2" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Introduction to SOFiSTiK</h5>
-                            <p class="card-text">Basic concepts and workflow in SOFiSTiK for bridge design</p>
-                            <small class="text-muted">Coming Soon</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="3">
-                    <div class="card">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" title="Video 3" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Grasshopper for Structural Engineers</h5>
-                            <p class="card-text">Parametric design techniques for structural optimization</p>
-                            <small class="text-muted">Coming Soon</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="4">
-                    <div class="card">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4" title="Video 4" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Cable-Stayed Bridge Analysis</h5>
-                            <p class="card-text">Advanced modeling techniques for cable-stayed structures</p>
-                            <small class="text-muted">Coming Soon</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="5">
-                    <div class="card">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_5" title="Video 5" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Post-Tensioning Design</h5>
-                            <p class="card-text">Comprehensive guide to post-tensioned concrete structures</p>
-                            <small class="text-muted">Coming Soon</small>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="6">
-                    <div class="card">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_6" title="Video 6" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Karamba 3D Tutorial Series</h5>
-                            <p class="card-text">Complete workflow for structural analysis in Grasshopper</p>
-                            <small class="text-muted">Coming Soon</small>
-                        </div>
-                    </div>
-                </div>
+            </div>
+
+            <!-- Future videos - hidden by default -->
+            <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="2">
+                <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" title="Video 2" allowfullscreen></iframe></div>
+                <div class="video-info"><h3>Introduction to SOFiSTiK</h3><p>Basic concepts and workflow in SOFiSTiK for bridge design</p><small class="text-muted">Coming Soon</small></div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="3">
+                <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" title="Video 3" allowfullscreen></iframe></div>
+                <div class="video-info"><h3>Grasshopper for Structural Engineers</h3><p>Parametric design techniques for structural optimisation</p><small class="text-muted">Coming Soon</small></div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="4">
+                <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4" title="Video 4" allowfullscreen></iframe></div>
+                <div class="video-info"><h3>Cable-Stayed Bridge Analysis</h3><p>Advanced modelling techniques for cable-stayed structures</p><small class="text-muted">Coming Soon</small></div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="5">
+                <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_5" title="Video 5" allowfullscreen></iframe></div>
+                <div class="video-info"><h3>Post-Tensioning Design</h3><p>Comprehensive guide to post-tensioned concrete structures</p><small class="text-muted">Coming Soon</small></div>
+            </div>
+            <div class="col-md-6 col-lg-4 d-none future-video" data-video-id="6">
+                <div class="video-wrap"><iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_6" title="Video 6" allowfullscreen></iframe></div>
+                <div class="video-info"><h3>Karamba 3D Tutorial Series</h3><p>Complete workflow for structural analysis in Grasshopper</p><small class="text-muted">Coming Soon</small></div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-dark text-light">
+    <section id="contact" class="section section-contact">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-4">Get in Touch</h2>
-                    <p class="lead mb-4">
-                        Let's connect and discuss potential collaborations or opportunities in structural engineering and computational design.
-                    </p>
-                    <div class="row g-4">
-                        <div class="col-6 col-md-3">
-                            <div class="contact-item">
-                                <a href="mailto:enquiry@shreyanshajmera.com" class="text-light" title="Email">
-                                    <i class="bi bi-envelope-fill fs-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="contact-item">
-                                <a href="tel:+447884516422" class="text-light" title="Phone">
-                                    <i class="bi bi-phone-fill fs-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="contact-item">
-                                <a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" class="text-light" title="YouTube Channel">
-                                    <i class="bi bi-youtube fs-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-6 col-md-3">
-                            <div class="contact-item">
-                                <a href="https://www.linkedin.com/in/shreyanshajmera" target="_blank" class="text-light" title="LinkedIn">
-                                    <i class="bi bi-linkedin fs-1"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="contact-inner">
+                <div class="contact-text reveal-up">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title">Let's work<br><em>together.</em></h2>
+                    <p>Open to discussions on collaborations, consulting opportunities, or just a conversation about bridges and computational design.</p>
+                </div>
+                <div class="contact-links reveal-up" style="--delay:0.15s">
+                    <a href="/cdn-cgi/l/email-protection#c8ada6b9bda1bab188bba0baadb1a9a6bba0a9a2a5adbaa9e6aba7a5" class="contact-link">
+                        <i class="bi bi-envelope-fill"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="tel:+447884516422" class="contact-link">
+                        <i class="bi bi-phone-fill"></i>
+                        <span>Phone</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shreyanshajmera" target="_blank" class="contact-link">
+                        <i class="bi bi-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" class="contact-link">
+                        <i class="bi bi-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-3">
+    <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <p>&copy; 2024 Shreyansh Ajmera. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-md-end">
-                    <p>Bridge Design Engineer | Ramboll UK</p>
-                </div>
-            </div>
+            <span>© 2025 Shreyansh Ajmera</span>
+            <span>Bridge Design Engineer · Ramboll UK</span>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
 </body>
 </html>
