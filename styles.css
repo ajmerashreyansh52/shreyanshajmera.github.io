@@ -95,6 +95,11 @@ em { font-style: italic; color: var(--accent); }
     height: 44px;
     width: auto;
     display: block;
+    filter: brightness(0) invert(1);
+    transition: filter var(--transition);
+}
+.navbar.scrolled .nav-logo-img {
+    filter: none;
 }
 
 .nav-links {
