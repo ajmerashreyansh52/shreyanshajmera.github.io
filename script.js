@@ -77,20 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // ── Video system ──
-    const videoConfig = {
-        1: 'dXG51nwp46U',
-        2: null,
-        3: null,
-        4: null,
-        5: null,
-        6: null
-    };
-    Object.entries(videoConfig).forEach(([id, ytId]) => {
-        const el = document.querySelector(`[data-video-id="${id}"]`);
-        if (el) el.classList.toggle('d-none', !ytId);
-    });
-
     // ── Analytics ──
     document.querySelectorAll('a[href^="mailto:"]').forEach(a =>
         a.addEventListener('click', () => trackEvent('email_click'))
@@ -111,8 +97,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (pct % 25 === 0) trackEvent('scroll_depth', { percentage: pct });
         }
     }, 500), { passive: true });
-
-    console.log('Site initialised ✓');
 });
 
 // ── Utilities ──
@@ -124,20 +108,3 @@ function debounce(fn, wait) {
 function trackEvent(name, params = {}) {
     if (typeof gtag !== 'undefined') gtag('event', name, params);
 }
-
-// ── Public API: video management ──
-window.showVideo = function (videoId, youtubeId, title, description, publishDate) {
-    const el = document.querySelector(`[data-video-id="${videoId}"]`);
-    if (!el) return;
-    el.classList.remove('d-none');
-    const iframe = el.querySelector('iframe');
-    if (iframe) iframe.src = `https://www.youtube.com/embed/${youtubeId}`;
-    if (title) { const t = el.querySelector('.card-title, h3'); if (t) t.textContent = title; }
-    if (description) { const d = el.querySelector('.card-text, p'); if (d) d.textContent = description; }
-    const s = el.querySelector('.text-muted, small');
-    if (s) s.textContent = publishDate ? `Published: ${publishDate}` : `Published: ${new Date().toLocaleDateString()}`;
-};
-
-window.hideVideo = function (videoId) {
-    document.querySelector(`[data-video-id="${videoId}"]`)?.classList.add('d-none');
-};
