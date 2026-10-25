@@ -184,24 +184,12 @@ h1, h2 {
 .hero-title .line:nth-child(2) > span { transition-delay: 0.12s; }
 .loaded .hero-title .line > span { transform: none; }
 
-.hero-intro { font-size: 1.2rem; margin-bottom: 1.75rem; }
-.stats {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    padding: 1.25rem 0;
+.hero-intro {
+    font-size: 1.2rem;
+    padding-top: 1.25rem;
     margin-bottom: 1.75rem;
     border-top: 2px solid var(--line);
-    border-bottom: 2px solid var(--line);
 }
-.stats b {
-    display: block;
-    font-family: var(--display);
-    font-weight: 400;
-    font-size: 3.25rem;
-    line-height: 1;
-}
-.stats span { font-size: 0.9rem; color: var(--ink-2); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* Ticker */
@@ -273,20 +261,18 @@ h1, h2 {
 .xp h3 { font-size: 1.6rem; font-weight: 800; line-height: 1.2; }
 .xp-org { color: var(--ink-2); margin-bottom: 0.5rem; }
 
-/* Projects list with an image that follows the cursor */
+/* Projects */
 
 .work { list-style: none; }
 .work-item {
-    position: relative;
     display: grid;
-    grid-template-columns: 4rem 1fr auto;
-    gap: 1.5rem;
-    align-items: baseline;
-    padding: 1.75rem 0;
+    grid-template-columns: 3rem 1fr minmax(320px, 46%);
+    gap: 2rem;
+    align-items: center;
+    padding: 2.5rem 0;
     border-bottom: 2px solid var(--line);
-    cursor: default;
 }
-.work-num { font-weight: 800; color: var(--ink-2); }
+.work-num { font-weight: 800; color: var(--ink-2); align-self: start; padding-top: 0.6rem; }
 .work-main h3 {
     font-family: var(--display);
     font-weight: 400;
@@ -303,24 +289,34 @@ h1, h2 {
     color: transparent;
 }
 .work-main p { max-width: 52ch; color: #333; margin-top: 0.5rem; }
-.work-meta { text-align: right; font-weight: 700; color: var(--ink-2); }
-.work-inline { display: none; }
+.work-main .work-meta { font-weight: 700; color: var(--ink-2); margin-top: 0.75rem; }
 
-.work-float {
-    position: fixed;
-    left: 0; top: 0;
-    z-index: 15;
-    width: 380px;
-    pointer-events: none;
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.8) rotate(-4deg);
-    transition: opacity 0.25s, transform 0.35s;
-    border: 3px solid var(--ink);
-    box-shadow: 12px 12px 0 var(--grad-a);
-    background: var(--paper);
+.work-img {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    border: 2px solid var(--ink);
+    background: #f2f2f2;
+    transition: box-shadow 0.35s, transform 0.35s;
 }
-.work-float.show { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(3deg); }
-.work-float img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+.work-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.work-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--grad);
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 0.35s;
+}
+.work-item:hover .work-img { transform: translate(-4px, -4px); box-shadow: 10px 10px 0 var(--grad-b); }
+.work-item:hover .work-img img { transform: scale(1.06); }
+.work-item:hover .work-img::after { opacity: 0.12; }
 
 /* Skills */
 
@@ -391,6 +387,8 @@ h1, h2 {
 
 @media (max-width: 1000px) {
     .hero { grid-template-columns: 1fr; gap: 2rem; padding-top: 110px; }
+    .work-item { grid-template-columns: 2.5rem 1fr; gap: 1rem 1.25rem; padding: 2rem 0; }
+    .work-img { grid-column: 1 / -1; }
     .section-grid { grid-template-columns: 1fr; gap: 1.5rem; }
     .skills { grid-template-columns: 1fr 1fr; }
     .spanlab { grid-template-columns: 1fr; }
@@ -400,21 +398,12 @@ h1, h2 {
     .brand img { height: 36px; }
     .about-cols { grid-template-columns: 1fr; gap: 1rem; }
     .xp li { grid-template-columns: 1fr; gap: 0.25rem; }
-    .work-item { grid-template-columns: 2.5rem 1fr; }
-    .work-meta { grid-column: 2; text-align: left; }
-    .work-inline { display: block; grid-column: 1 / -1; border: 2px solid var(--ink); margin-top: 0.5rem; }
-    .stats { gap: 1.5rem; }
-    .stats b { font-size: 2.6rem; }
     .site-footer { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 480px) {
     .skills { grid-template-columns: 1fr; }
     .hero-actions .btn { flex: 1 1 100%; text-align: center; }
-}
-
-@media (hover: none) {
-    .work-float { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
