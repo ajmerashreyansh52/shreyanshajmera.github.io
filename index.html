@@ -6,8 +6,9 @@
     <title>Shreyansh Ajmera | Bridge Design Engineer</title>
     <meta name="description" content="Bridge design engineer at Ramboll UK, Southampton. Post-tensioned concrete, computational design and structural optimisation on projects in Norway, Iceland, Italy and India.">
     <link rel="canonical" href="https://www.shreyanshajmera.com/">
-    <link rel="icon" href="favicon.ico">
-    <meta name="theme-color" content="#a84d24">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <meta name="theme-color" content="#0b4ea2">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.shreyanshajmera.com/">
@@ -27,7 +28,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Overpass+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&family=Overpass+Mono:wght@500;600&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
@@ -35,7 +36,12 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="#top" aria-label="Shreyansh Ajmera, home">
-                <img src="img/logo_re.png" alt="Shreyansh Ajmera" width="129" height="36">
+                <svg class="mark" viewBox="0 0 64 40" aria-hidden="true">
+                    <path d="M8 34 Q32 -22 56 34" stroke-width="3.4"/>
+                    <path d="M3 34H61" stroke-width="3.4"/>
+                    <path d="M16 18.4L28 34M24 9.1L36 34M32 6L44 34M40 9.1L52 34M48 18.4L36 34M40 9.1L28 34M32 6L20 34M24 9.1L12 34" stroke-width="1.3"/>
+                </svg>
+                <span class="brand-name">Shreyansh Ajmera</span>
             </a>
             <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
             <nav>
@@ -55,56 +61,32 @@
 
         <section class="hero">
             <div class="container">
-                <div class="hero-head">
-                    <h1 class="hero-name">Shreyansh <span>Ajmera</span></h1>
-                    <div class="hero-intro">
-                        <p class="hero-role">Bridge design engineer<br>Ramboll UK, Southampton</p>
-                        <p class="hero-lede">
-                            Seven years of structural design on projects in Norway, Iceland, Italy and India,
-                            specialising in post-tensioned concrete, computational design and structural optimisation.
-                        </p>
-                        <div class="hero-actions">
-                            <a href="mailto:enquiry@shreyanshajmera.com" class="btn btn-primary">Email me</a>
-                            <a href="Shreyansh%20Ajmera.pdf" class="btn btn-secondary" download>Download CV (PDF)</a>
+                <div class="sign">
+                    <div class="sign-inner">
+                        <div class="sign-text">
+                            <h1>Shreyansh Ajmera</h1>
+                            <p class="sign-role">Bridge design engineer, Ramboll UK, Southampton</p>
+                            <p class="sign-lede">
+                                Seven years of structural design on projects in Norway, Iceland, Italy and India,
+                                specialising in post-tensioned concrete, computational design and structural optimisation.
+                            </p>
+                            <div class="hero-actions">
+                                <a href="mailto:enquiry@shreyanshajmera.com" class="btn btn-light">Email me</a>
+                                <a href="Shreyansh%20Ajmera.pdf" class="btn btn-outline" download>Download CV (PDF)</a>
+                            </div>
                         </div>
+                        <figure class="sign-photo">
+                            <img src="img/profile.jpg" alt="Shreyansh Ajmera" width="900" height="1200">
+                        </figure>
                     </div>
                 </div>
-
-                <figure class="sheet bridge" id="bridge">
-                    <svg role="img" aria-labelledby="bridgeTitle" aria-describedby="bridgeDesc">
-                        <title id="bridgeTitle">Bending moment in a three-span continuous bridge deck</title>
-                        <desc id="bridgeDesc">Elevation of a 24, 33 and 24 metre continuous deck on four supports, with a 100 kN point load that can be moved along the deck. The deflected shape and bending moment diagram update as the load moves.</desc>
-                    </svg>
-                    <div class="bridge-control">
-                        <label for="loadPos">Drag along the deck, or use the slider, to move the load</label>
-                        <input id="loadPos" type="range" min="0.5" max="80.5" step="0.1" value="40.5">
-                    </div>
-                    <figcaption class="strip">
-                        <div class="strip-cell strip-title">
-                            <span class="label">Elevation</span>
-                            <p>Three-span continuous deck, 24 + 33 + 24 m, under a 100 kN point load. Deflection exaggerated.</p>
-                        </div>
-                        <div class="strip-cell">
-                            <span class="label">Load position</span>
-                            <output data-out="x">40.5 m</output>
-                        </div>
-                        <div class="strip-cell">
-                            <span class="label">Moment under load</span>
-                            <output data-out="sag">&nbsp;</output>
-                        </div>
-                        <div class="strip-cell">
-                            <span class="label">Moment over piers</span>
-                            <output data-out="hog">&nbsp;</output>
-                        </div>
-                    </figcaption>
-                </figure>
             </div>
         </section>
 
         <section id="about" class="section">
             <div class="container">
                 <div class="section-head"><span class="bubble" aria-hidden="true">A</span><h2>About</h2></div>
-                <div class="about-grid">
+                <div>
                     <div class="prose">
                         <p class="lead">
                             I'm a bridge engineer at Ramboll. Most of my work is post-tensioned concrete design,
@@ -126,9 +108,6 @@
                         </p>
                         <p class="note">I'm working towards ICE chartership and aim to complete my CPR in 2027.</p>
                     </div>
-                    <figure class="about-photo">
-                        <img src="img/profile.jpg" alt="Shreyansh Ajmera" width="900" height="1200" loading="lazy">
-                    </figure>
                 </div>
             </div>
         </section>
@@ -290,7 +269,7 @@
             </div>
         </section>
 
-        <section id="contact" class="section section-rust">
+        <section id="contact" class="section section-blue">
             <div class="container">
                 <div class="section-head"><span class="bubble" aria-hidden="true">F</span><h2>Contact</h2></div>
                 <p class="contact-intro">
@@ -311,7 +290,14 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-block">
-                <div class="fb-cell fb-logo"><img src="img/logo_re.png" alt="Shreyansh Ajmera" width="129" height="36" loading="lazy"></div>
+                <div class="fb-cell fb-logo">
+                    <svg class="mark" viewBox="0 0 64 40" aria-hidden="true">
+                        <path d="M8 34 Q32 -22 56 34" stroke-width="3.4"/>
+                        <path d="M3 34H61" stroke-width="3.4"/>
+                        <path d="M16 18.4L28 34M24 9.1L36 34M32 6L44 34M40 9.1L52 34M48 18.4L36 34M40 9.1L28 34M32 6L20 34M24 9.1L12 34" stroke-width="1.3"/>
+                    </svg>
+                    <span class="brand-name">Shreyansh Ajmera</span>
+                </div>
                 <div class="fb-cell"><span class="label">Drawn by</span>Shreyansh Ajmera</div>
                 <div class="fb-cell"><span class="label">Location</span>Southampton, UK</div>
                 <div class="fb-cell"><span class="label">Revision</span>2026.10</div>
