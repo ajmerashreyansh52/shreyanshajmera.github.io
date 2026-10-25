@@ -1,33 +1,26 @@
-// Shreyansh Ajmera — Website JS
 document.addEventListener('DOMContentLoaded', function () {
 
-    // ── Navbar scroll effect ──
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-
-    // ── Mobile nav toggle ──
+    // Mobile menu
     const navToggle = document.getElementById('navToggle');
     const navLinks  = document.getElementById('navLinks');
-    navToggle?.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
+    const header    = document.querySelector('.site-header');
 
-    // Close mobile nav on link click
-    navLinks?.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => navLinks.classList.remove('open'));
+    function closeMenu() {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+    }
+    navToggle.addEventListener('click', () => {
+        const open = navLinks.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', String(open));
     });
-
-    // Close mobile nav on outside click
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
     document.addEventListener('click', e => {
-        if (!navbar.contains(e.target)) navLinks?.classList.remove('open');
+        if (!header.contains(e.target)) closeMenu();
     });
 
-    // ── Active nav highlighting ──
+    // Highlight the nav link for the section in view
     const sections = document.querySelectorAll('section[id]');
-    const navItems = document.querySelectorAll('.nav-links a');
-
+    const navItems = navLinks.querySelectorAll('a');
     function setActiveNav() {
         let current = '';
         sections.forEach(s => {
@@ -38,46 +31,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     window.addEventListener('scroll', debounce(setActiveNav, 60), { passive: true });
+    setActiveNav();
 
-    // ── Scroll reveal ──
-    const revealEls = document.querySelectorAll('.reveal-up, .reveal-right');
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('revealed');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    revealEls.forEach(el => revealObserver.observe(el));
-
-    // Trigger hero reveals immediately (they're in viewport)
-    document.querySelectorAll('.hero .reveal-up, .hero .reveal-right').forEach(el => {
-        setTimeout(() => el.classList.add('revealed'), parseFloat(el.style.getPropertyValue('--delay') || '0') * 1000);
-    });
-
-    // ── Smooth scroll ──
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-        link.addEventListener('click', e => {
-            const target = document.querySelector(link.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                trackEvent('navigation_click', { section: link.getAttribute('href').slice(1) });
-            }
-        });
-    });
-
-    // ── Back to top ──
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-        backToTop?.classList.toggle('visible', window.scrollY > 400);
-    }, { passive: true });
-    backToTop?.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // ── Analytics ──
+    // Analytics
+    navItems.forEach(a =>
+        a.addEventListener('click', () => trackEvent('navigation_click', { section: a.getAttribute('href').slice(1) }))
+    );
     document.querySelectorAll('a[href^="mailto:"]').forEach(a =>
         a.addEventListener('click', () => trackEvent('email_click'))
     );
@@ -88,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
         a.addEventListener('click', () => trackEvent('cv_download'))
     );
 
-    // Scroll depth tracking
     let maxDepth = 0;
     window.addEventListener('scroll', debounce(() => {
         const pct = Math.round(window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100);
@@ -99,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 500), { passive: true });
 });
 
-// ── Utilities ──
 function debounce(fn, wait) {
     let t;
     return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), wait); };
