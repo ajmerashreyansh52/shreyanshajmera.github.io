@@ -6,9 +6,9 @@
     <title>Shreyansh Ajmera | Bridge Design Engineer</title>
     <meta name="description" content="Bridge design engineer at Ramboll UK, Southampton. Post-tensioned concrete, computational design and structural optimisation on projects in Norway, Iceland, Italy and India.">
     <link rel="canonical" href="https://www.shreyanshajmera.com/">
-    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <meta name="theme-color" content="#0b4ea2">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <meta name="theme-color" content="#ffffff">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.shreyanshajmera.com/">
@@ -28,70 +28,80 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800&family=Overpass+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Libre+Franklin:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
 
     <header class="site-header">
-        <div class="container header-inner">
-            <a class="brand" href="#top" aria-label="Shreyansh Ajmera, home">
-                <svg class="mark" viewBox="0 0 64 40" aria-hidden="true">
-                    <path d="M8 34 Q32 -22 56 34" stroke-width="3.4"/>
-                    <path d="M3 34H61" stroke-width="3.4"/>
-                    <path d="M16 18.4L28 34M24 9.1L36 34M32 6L44 34M40 9.1L52 34M48 18.4L36 34M40 9.1L28 34M32 6L20 34M24 9.1L12 34" stroke-width="1.3"/>
-                </svg>
-                <span class="brand-name">Shreyansh Ajmera</span>
-            </a>
-            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
-            <nav>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#spanlab">SpanLab</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <a class="brand" href="#top" aria-label="Shreyansh Ajmera, home">
+            <img src="img/logo-ajmera.png" alt="Shreyansh Ajmera" width="158" height="44">
+        </a>
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">
+            <span class="menu-label">Menu</span><span class="burger" aria-hidden="true"></span>
+        </button>
     </header>
+
+    <div class="menu" id="menu" hidden>
+        <nav aria-label="Main">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#spanlab">SpanLab</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="menu-foot">
+            <a href="mailto:enquiry@shreyanshajmera.com">enquiry@shreyanshajmera.com</a>
+            <a href="https://www.linkedin.com/in/shreyanshajmera" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" rel="noopener">YouTube</a>
+        </div>
+    </div>
 
     <main id="top">
 
         <section class="hero">
-            <div class="container">
-                <div class="sign">
-                    <div class="sign-inner">
-                        <div class="sign-text">
-                            <h1>Shreyansh Ajmera</h1>
-                            <p class="sign-role">Bridge design engineer, Ramboll UK, Southampton</p>
-                            <p class="sign-lede">
-                                Seven years of structural design on projects in Norway, Iceland, Italy and India,
-                                specialising in post-tensioned concrete, computational design and structural optimisation.
-                            </p>
-                            <div class="hero-actions">
-                                <a href="mailto:enquiry@shreyanshajmera.com" class="btn btn-light">Email me</a>
-                                <a href="Shreyansh%20Ajmera.pdf" class="btn btn-outline" download>Download CV (PDF)</a>
-                            </div>
-                        </div>
-                        <figure class="sign-photo">
-                            <img src="img/profile.jpg" alt="Shreyansh Ajmera" width="900" height="1200">
-                        </figure>
-                    </div>
+            <h1 class="hero-title">
+                <span class="line"><span>Shreyansh</span></span>
+                <span class="line"><span class="grad-text">Ajmera</span></span>
+            </h1>
+            <div class="hero-side">
+                <p class="hero-intro">
+                    Bridge design engineer at <strong>Ramboll UK</strong>, Southampton, working in post-tensioned
+                    concrete and computational design.
+                </p>
+                <ul class="stats">
+                    <li><b data-count="7">7</b><span>years</span></li>
+                    <li><b data-count="4">4</b><span>countries</span></li>
+                    <li><b data-count="3">3</b><span>key projects</span></li>
+                </ul>
+                <div class="hero-actions">
+                    <a href="mailto:enquiry@shreyanshajmera.com" class="btn btn-grad">Email me</a>
+                    <a href="Shreyansh%20Ajmera.pdf" class="btn btn-line" download>Download CV</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section">
-            <div class="container">
-                <div class="section-head"><span class="bubble" aria-hidden="true">A</span><h2>About</h2></div>
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>SOFiSTiK</span><i>/</i><span>Rhino-Grasshopper</span><i>/</i><span>Karamba 3D</span><i>/</i>
+                <span>Eurocodes</span><i>/</i><span>Post-tensioned concrete</span><i>/</i><span>LUSAS</span><i>/</i>
+                <span>IDEA StatiCa</span><i>/</i><span>Python</span><i>/</i>
+                <span>SOFiSTiK</span><i>/</i><span>Rhino-Grasshopper</span><i>/</i><span>Karamba 3D</span><i>/</i>
+                <span>Eurocodes</span><i>/</i><span>Post-tensioned concrete</span><i>/</i><span>LUSAS</span><i>/</i>
+                <span>IDEA StatiCa</span><i>/</i><span>Python</span><i>/</i>
+            </div>
+        </div>
+
+        <section id="about" class="section reveal">
+            <div class="section-grid">
+                <h2>About</h2>
                 <div>
-                    <div class="prose">
-                        <p class="lead">
-                            I'm a bridge engineer at Ramboll. Most of my work is post-tensioned concrete design,
-                            and the FE and parametric models behind it.
-                        </p>
+                    <p class="lead">
+                        I'm a bridge engineer at Ramboll. Most of my work is post-tensioned concrete design,
+                        and the FE and parametric models behind it.
+                    </p>
+                    <div class="about-cols">
                         <p>
                             I joined Ramboll India in Gurgaon in 2019 and moved to the Major Projects team in
                             Southampton in 2023. I design and analyse bridges to the Eurocodes, and have working
@@ -99,168 +109,110 @@
                         </p>
                         <p>
                             I use SOFiSTiK and LUSAS for analysis, and Rhino, Grasshopper and Karamba 3D for geometry
-                            and automation. A good parametric model pays off on the complex problems and the
-                            repetitive ones alike.
+                            and automation. I also run <a href="#spanlab">SpanLab</a>, a YouTube channel with
+                            tutorials on structural engineering software.
                         </p>
-                        <p>
-                            I also run <a href="#spanlab">SpanLab</a>, a YouTube channel with tutorials on structural
-                            engineering software and computational design.
-                        </p>
-                        <p class="note">I'm working towards ICE chartership and aim to complete my CPR in 2027.</p>
                     </div>
+                    <p class="note">Working towards ICE chartership, aiming to complete my CPR in 2027.</p>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="section section-sheet">
-            <div class="container">
-                <div class="section-head"><span class="bubble" aria-hidden="true">B</span><h2>Experience</h2></div>
-                <table class="revisions">
-                    <thead>
-                        <tr><th scope="col">Rev</th><th scope="col">Date</th><th scope="col">Description</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="rev">B</td>
-                            <td class="date">Jun 2023 – present</td>
-                            <td>
-                                <h3>Design Engineer, Major Projects</h3>
-                                <p class="org">Ramboll UK, Southampton</p>
-                                <p>
-                                    Bridge design on major projects in Europe, specialising in computational design and
-                                    structural optimisation with SOFiSTiK, Rhino-Grasshopper and parametric modelling workflows.
-                                </p>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rev">A</td>
-                            <td class="date">Jul 2019 – Jun 2023</td>
-                            <td>
-                                <h3>Assistant Design Engineer</h3>
-                                <p class="org">Ramboll India Pvt Ltd, Gurgaon</p>
-                                <p>
-                                    Bridge design and analysis on international projects, with a focus on structural
-                                    optimisation, post-tensioned concrete and computational methods.
-                                </p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section id="experience" class="section reveal">
+            <div class="section-grid">
+                <h2>Experience</h2>
+                <ol class="xp">
+                    <li>
+                        <span class="xp-date">Jun 2023 – present</span>
+                        <div>
+                            <h3>Design Engineer, Major Projects</h3>
+                            <p class="xp-org">Ramboll UK, Southampton</p>
+                            <p>Bridge design on major projects in Europe, specialising in computational design and
+                                structural optimisation with SOFiSTiK, Rhino-Grasshopper and parametric modelling workflows.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="xp-date">Jul 2019 – Jun 2023</span>
+                        <div>
+                            <h3>Assistant Design Engineer</h3>
+                            <p class="xp-org">Ramboll India Pvt Ltd, Gurgaon</p>
+                            <p>Bridge design and analysis on international projects, with a focus on structural
+                                optimisation, post-tensioned concrete and computational methods.</p>
+                        </div>
+                    </li>
+                </ol>
             </div>
         </section>
 
-        <section id="projects" class="section">
-            <div class="container">
-                <div class="section-head"><span class="bubble" aria-hidden="true">C</span><h2>Projects</h2></div>
-
-                <div class="projects">
-                    <article class="project project-featured">
-                        <img src="img/k31-vulu-bridge.jpg" alt="SOFiSTiK model of the K31 Vulu Bridge deck" loading="lazy" width="1725" height="813">
-                        <div class="titleblock">
-                            <div class="tb-cell tb-name">
-                                <span class="label">Project</span>
-                                <h3>K31 Vulu Bridge</h3>
-                                <p>E6 Ranheim–Sveberg, Norway</p>
-                            </div>
-                            <div class="tb-cell"><span class="label">Structure</span><p>Three-span integral post-tensioned slab deck, 33 m maximum span</p></div>
-                            <div class="tb-cell"><span class="label">Scope</span><p>Concept design</p></div>
-                            <div class="tb-cell"><span class="label">Tools</span><p>SOFiSTiK</p></div>
-                            <div class="tb-cell"><span class="label">Period</span><p>2025 – May 2026</p></div>
-                        </div>
-                    </article>
-
-                    <article class="project">
-                        <img src="img/olfusarbrú-bridge.jpg" alt="Model of the Ny Ölfusárbrú cable-stayed bridge" loading="lazy" width="1218" height="626">
-                        <div class="titleblock">
-                            <div class="tb-cell tb-name">
-                                <span class="label">Project</span>
-                                <h3>Ny Ölfusárbrú</h3>
-                                <p>Iceland</p>
-                            </div>
-                            <div class="tb-cell"><span class="label">Structure</span><p>Cable-stayed bridge</p></div>
-                            <div class="tb-cell"><span class="label">Scope</span><p>Detailed design of the abutments</p></div>
-                            <div class="tb-cell"><span class="label">Tools</span><p>SOFiSTiK, Rhino-Grasshopper</p></div>
-                            <div class="tb-cell"><span class="label">Period</span><p>Sept 2024 – April 2025</p></div>
-                        </div>
-                    </article>
-
-                    <article class="project">
-                        <img src="img/genova-breakwater.jpg" alt="FE model of a Genova breakwater caisson" loading="lazy" width="1185" height="819">
-                        <div class="titleblock">
-                            <div class="tb-cell tb-name">
-                                <span class="label">Project</span>
-                                <h3>Genova Breakwater</h3>
-                                <p>Italy</p>
-                            </div>
-                            <div class="tb-cell"><span class="label">Structure</span><p>Breakwater caissons</p></div>
-                            <div class="tb-cell"><span class="label">Scope</span><p>Detailed design under extreme wave conditions, with parametric models for multiple caisson geometries</p></div>
-                            <div class="tb-cell tb-wide"><span class="label">Period</span><p>Sept 2023 – Sept 2024</p></div>
-                        </div>
-                    </article>
-                </div>
-            </div>
+        <section id="projects" class="section reveal">
+            <h2 class="wide-title">Projects</h2>
+            <ul class="work">
+                <li class="work-item" data-img="img/k31-vulu-bridge.jpg">
+                    <span class="work-num">01</span>
+                    <div class="work-main">
+                        <h3>K31 Vulu Bridge</h3>
+                        <p>E6 Ranheim–Sveberg. Three-span integral post-tensioned slab deck, 33 m maximum span.
+                            Concept design in SOFiSTiK.</p>
+                    </div>
+                    <span class="work-meta">Norway<br>2025 – May 2026</span>
+                    <img class="work-inline" src="img/k31-vulu-bridge.jpg" alt="SOFiSTiK model of the K31 Vulu Bridge deck" loading="lazy" width="1725" height="813">
+                </li>
+                <li class="work-item" data-img="img/olfusarbrú-bridge.jpg">
+                    <span class="work-num">02</span>
+                    <div class="work-main">
+                        <h3>Ny Ölfusárbrú</h3>
+                        <p>Cable-stayed bridge. Detailed design of the abutments with SOFiSTiK and Rhino-Grasshopper.</p>
+                    </div>
+                    <span class="work-meta">Iceland<br>Sept 2024 – April 2025</span>
+                    <img class="work-inline" src="img/olfusarbrú-bridge.jpg" alt="Model of the Ny Ölfusárbrú cable-stayed bridge" loading="lazy" width="1218" height="626">
+                </li>
+                <li class="work-item" data-img="img/genova-breakwater.jpg">
+                    <span class="work-num">03</span>
+                    <div class="work-main">
+                        <h3>Genova Breakwater</h3>
+                        <p>Breakwater caissons. Detailed design under extreme wave conditions, with parametric models
+                            for multiple caisson geometries.</p>
+                    </div>
+                    <span class="work-meta">Italy<br>Sept 2023 – Sept 2024</span>
+                    <img class="work-inline" src="img/genova-breakwater.jpg" alt="FE model of a Genova breakwater caisson" loading="lazy" width="1185" height="819">
+                </li>
+            </ul>
+            <div class="work-float" aria-hidden="true"><img alt=""></div>
         </section>
 
-        <section id="skills" class="section section-sheet">
-            <div class="container">
-                <div class="section-head"><span class="bubble" aria-hidden="true">D</span><h2>Skills</h2></div>
-                <div class="schedule">
-                    <div class="schedule-col">
+        <section id="skills" class="section reveal">
+            <div class="section-grid">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <div>
                         <h3>Structural analysis</h3>
-                        <ul>
-                            <li>SOFiSTiK</li>
-                            <li>LUSAS</li>
-                            <li>IDEA StatiCa</li>
-                            <li>Oasys AdSec</li>
-                        </ul>
+                        <ul><li>SOFiSTiK</li><li>LUSAS</li><li>IDEA StatiCa</li><li>Oasys AdSec</li></ul>
                     </div>
-                    <div class="schedule-col">
+                    <div>
                         <h3>Computational design</h3>
-                        <ul>
-                            <li>Rhino-Grasshopper</li>
-                            <li>Karamba 3D</li>
-                            <li>Python</li>
-                            <li>Mathcad</li>
-                        </ul>
+                        <ul><li>Rhino-Grasshopper</li><li>Karamba 3D</li><li>Python</li><li>Mathcad</li></ul>
                     </div>
-                    <div class="schedule-col">
+                    <div>
                         <h3>BIM and coordination</h3>
-                        <ul>
-                            <li>Solibri Office</li>
-                            <li>Trimble Connect</li>
-                            <li>AutoCAD</li>
-                            <li>3D coordination</li>
-                        </ul>
+                        <ul><li>Solibri Office</li><li>Trimble Connect</li><li>AutoCAD</li><li>3D coordination</li></ul>
                     </div>
-                    <div class="schedule-col">
+                    <div>
                         <h3>Design standards</h3>
-                        <ul>
-                            <li>Eurocodes</li>
-                            <li>AASHTO LRFD</li>
-                            <li>Statens vegvesen N400</li>
-                            <li>Coastal Engineering Manual</li>
-                        </ul>
+                        <ul><li>Eurocodes</li><li>AASHTO LRFD</li><li>Statens vegvesen N400</li><li>Coastal Engineering Manual</li></ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="spanlab" class="section section-dark">
-            <div class="container">
-                <div class="section-head"><span class="bubble" aria-hidden="true">E</span><h2>SpanLab</h2></div>
-                <div class="spanlab-grid">
-                    <div class="prose">
-                        <p class="lead">
-                            SpanLab is my YouTube channel, with tutorials on structural engineering software and
-                            computational design.
-                        </p>
-                        <p>
-                            This one walks through installing SOFiSTiK FEA, SOFiPlus-X and the Rhinoceros
-                            interface using SAM.
-                        </p>
-                        <p>
-                            <a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" rel="noopener" class="btn btn-primary">Watch on YouTube</a>
-                        </p>
+        <section id="spanlab" class="section reveal">
+            <div class="section-grid">
+                <h2>SpanLab</h2>
+                <div class="spanlab">
+                    <div>
+                        <p class="lead">My YouTube channel, with tutorials on structural engineering software and
+                            computational design.</p>
+                        <p>This one walks through installing SOFiSTiK FEA, SOFiPlus-X and the Rhinoceros interface using SAM.</p>
+                        <a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" rel="noopener" class="btn btn-grad">Watch on YouTube</a>
                     </div>
                     <div class="video">
                         <iframe src="https://www.youtube.com/embed/dXG51nwp46U?si=03ynGbp2rswt4ROu" title="SOFiSTiK installation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
@@ -269,41 +221,23 @@
             </div>
         </section>
 
-        <section id="contact" class="section section-blue">
-            <div class="container">
-                <div class="section-head"><span class="bubble" aria-hidden="true">F</span><h2>Contact</h2></div>
-                <p class="contact-intro">
-                    Open to collaborations, consulting work, or a conversation about bridges and computational design.
-                </p>
-                <a class="contact-email" href="mailto:enquiry@shreyanshajmera.com">enquiry@<wbr>shreyanshajmera.com</a>
-                <dl class="contact-list">
-                    <div><dt>Phone</dt><dd><a href="tel:+447884516422">+44 7884 516422</a></dd></div>
-                    <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/shreyanshajmera" target="_blank" rel="noopener">shreyanshajmera</a></dd></div>
-                    <div><dt>YouTube</dt><dd><a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" rel="noopener">SpanLab</a></dd></div>
-                    <div><dt>CV</dt><dd><a href="Shreyansh%20Ajmera.pdf" download>Download PDF</a></dd></div>
-                </dl>
-            </div>
+        <section id="contact" class="contact">
+            <h2 class="wide-title">Contact</h2>
+            <p class="contact-intro">Open to collaborations, consulting work, or a conversation about bridges and computational design.</p>
+            <a class="contact-email" href="mailto:enquiry@shreyanshajmera.com">enquiry@<wbr>shreyanshajmera.com</a>
+            <dl class="contact-list">
+                <div><dt>Phone</dt><dd><a href="tel:+447884516422">+44 7884 516422</a></dd></div>
+                <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/shreyanshajmera" target="_blank" rel="noopener">shreyanshajmera</a></dd></div>
+                <div><dt>YouTube</dt><dd><a href="https://www.youtube.com/@SpanLabbyShreyanshAjmera" target="_blank" rel="noopener">SpanLab</a></dd></div>
+                <div><dt>CV</dt><dd><a href="Shreyansh%20Ajmera.pdf" download>Download PDF</a></dd></div>
+            </dl>
         </section>
 
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-block">
-                <div class="fb-cell fb-logo">
-                    <svg class="mark" viewBox="0 0 64 40" aria-hidden="true">
-                        <path d="M8 34 Q32 -22 56 34" stroke-width="3.4"/>
-                        <path d="M3 34H61" stroke-width="3.4"/>
-                        <path d="M16 18.4L28 34M24 9.1L36 34M32 6L44 34M40 9.1L52 34M48 18.4L36 34M40 9.1L28 34M32 6L20 34M24 9.1L12 34" stroke-width="1.3"/>
-                    </svg>
-                    <span class="brand-name">Shreyansh Ajmera</span>
-                </div>
-                <div class="fb-cell"><span class="label">Drawn by</span>Shreyansh Ajmera</div>
-                <div class="fb-cell"><span class="label">Location</span>Southampton, UK</div>
-                <div class="fb-cell"><span class="label">Revision</span>2026.10</div>
-                <div class="fb-cell"><span class="label">Copyright</span>© 2026</div>
-            </div>
-        </div>
+        <img src="img/logo-ajmera-white.png" alt="Shreyansh Ajmera" width="144" height="40" loading="lazy">
+        <p>© 2026 Shreyansh Ajmera. Southampton, UK.</p>
     </footer>
 
     <script src="script.js"></script>
